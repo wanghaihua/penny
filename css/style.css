@@ -57,7 +57,7 @@ p {
 }
 
 .navbar-toggle .icon-bar {
-  background: rgb(247, 87, 87);
+  background: #44A36F;
 }
 
 input[type=email], input[type=password], input[type=text], input[type=tel] {
@@ -68,7 +68,7 @@ input[type=email], input[type=password], input[type=text], input[type=tel] {
 }
 input[type=email]:focus, input[type=password]:focus, input[type=text]:focus, input[type=tel]:focus {
   box-shadow: none;
-  border: 1px solid rgb(247, 87, 87);
+  border: 1px solid #44A36F;
 }
 
 .form-control {
@@ -77,7 +77,7 @@ input[type=email]:focus, input[type=password]:focus, input[type=text]:focus, inp
 }
 .form-control:focus {
   box-shadow: none;
-  border: 1px solid rgb(247, 87, 87);
+  border: 1px solid #44A36F;
 }
 
 .py-7 {
@@ -105,33 +105,33 @@ input[type=email]:focus, input[type=password]:focus, input[type=text]:focus, inp
 }
 
 .btn-main, .btn-small, .btn-transparent {
-  background: rgb(247, 87, 87);
+  background: #44A36F;
   color: #fff;
   transition: all 0.2s ease;
 }
 .btn-main:hover, .btn-small:hover, .btn-transparent:hover {
-  background: #f52626;
+  background: #2E7D52;
   color: #fff;
 }
 
 .btn-solid-border {
-  border: 2px solid rgb(247, 87, 87);
+  border: 2px solid #44A36F;
   background: transparent;
   color: #242424;
 }
 .btn-solid-border:hover {
-  border: 2px solid rgb(247, 87, 87);
-  background: rgb(247, 87, 87);
+  border: 2px solid #44A36F;
+  background: #44A36F;
 }
 
 .btn-transparent {
   background: transparent;
   padding: 0;
-  color: rgb(247, 87, 87);
+  color: #44A36F;
 }
 .btn-transparent:hover {
   background: transparent;
-  color: rgb(247, 87, 87);
+  color: #44A36F;
 }
 
 .btn-large {
@@ -165,15 +165,15 @@ input[type=email]:focus, input[type=password]:focus, input[type=text]:focus, inp
 }
 
 .bg-primary {
-  background: rgb(247, 87, 87);
+  background: #44A36F;
 }
 
 .bg-primary-dark {
-  background: #f52626;
+  background: #2E7D52;
 }
 
 .bg-primary-darker {
-  background: #dd0b0b;
+  background: #1E5437;
 }
 
 .bg-dark {
@@ -206,7 +206,7 @@ input[type=email]:focus, input[type=password]:focus, input[type=text]:focus, inp
 }
 
 .subtitle {
-  color: rgb(247, 87, 87);
+  color: #44A36F;
   font-size: 14px;
   letter-spacing: 1px;
 }
@@ -243,7 +243,7 @@ input[type=email]:focus, input[type=password]:focus, input[type=text]:focus, inp
 }
 
 .text-color {
-  color: rgb(247, 87, 87);
+  color: #44A36F;
 }
 
 .text-black {
@@ -251,7 +251,7 @@ input[type=email]:focus, input[type=password]:focus, input[type=text]:focus, inp
 }
 
 .text-color2 {
-  color: #c54041;
+  color: #2E7D52;
 }
 
 .text-color2 {
@@ -281,7 +281,7 @@ a {
 }
 
 a:focus, a:hover {
-  color: rgb(247, 87, 87);
+  color: #44A36F;
   text-decoration: none;
 }
 
@@ -393,7 +393,7 @@ a:focus {
 }
 #navbar .nav-link:hover, #navbar .nav-link:focus,
 #navbar .active .nav-link {
-  color: rgb(247, 87, 87);
+  color: #44A36F;
 }
 #navbar .btn {
   padding: 0.7rem 1.5rem 0.5rem;
@@ -424,7 +424,7 @@ a:focus {
   padding: 0 8px;
 }
 .header-top .header-top-socials a:hover {
-  color: rgb(247, 87, 87);
+  color: #44A36F;
 }
 .header-top .header-top-info {
   color: #919194;
@@ -453,7 +453,7 @@ a:focus {
   letter-spacing: 1px;
 }
 .navbar-brand span {
-  color: rgb(247, 87, 87);
+  color: #44A36F;
 }
 
 .dropdown-menu {
@@ -520,8 +520,8 @@ a:focus {
 .dropdown-submenu:hover > .dropdown-item,
 .dropdown-item.active,
 .dropdown-item:hover {
-  background: rgb(247, 87, 87);
-  color: #fff;
+  background: #e8f5e9;
+  color: #2E7D52;
 }
 
 ul.dropdown-menu li {
@@ -598,7 +598,7 @@ ul.dropdown-menu li {
 }
 
 .color-one {
-  color: rgb(247, 87, 87);
+  color: #44A36F;
 }
 
 .color-two {
@@ -788,7 +788,7 @@ ul.dropdown-menu li {
   border-color: #dedede;
 }
 .pricing .btn-solid-border:Hover {
-  border-color: rgb(247, 87, 87);
+  border-color: #44A36F;
 }
 
 .portflio-item .portfolio-item-content {
@@ -830,7 +830,7 @@ ul.dropdown-menu li {
   align-items: center;
   justify-content: center;
   font-size: 80px;
-  color: rgb(247, 87, 87);
+  color: #44A36F;
   opacity: 0;
   transition: all 0.35s ease;
 }
@@ -895,7 +895,7 @@ ul.dropdown-menu li {
   transition: all 0.4s ease 0s;
 }
 .blog-item-content h3 a:hover {
-  color: rgb(247, 87, 87) !important;
+  color: #44A36F !important;
 }
 
 .lh-36 {
@@ -948,7 +948,7 @@ h3.quote::before {
   content: "";
   width: 55px;
   height: 2px;
-  background: rgb(247, 87, 87);
+  background: #44A36F;
   position: absolute;
   top: 25px;
   left: 0;
@@ -1021,7 +1021,7 @@ h3.quote::before {
   font-weight: 500;
 }
 .post-comments .comment-author a {
-  color: rgb(247, 87, 87);
+  color: #44A36F;
   font-size: 14px;
   text-transform: uppercase;
 }
@@ -1032,7 +1032,7 @@ h3.quote::before {
   font-size: 12px;
 }
 .post-comments .comment-button {
-  color: rgb(247, 87, 87);
+  color: #44A36F;
   display: inline-block;
   margin-left: 5px;
   font-size: 12px;
@@ -1042,7 +1042,7 @@ h3.quote::before {
   display: inline-block;
 }
 .post-comments .comment-button:hover {
-  color: rgb(247, 87, 87);
+  color: #44A36F;
 }
 
 .post-excerpt {
@@ -1060,7 +1060,7 @@ h3.quote::before {
 .post-excerpt blockquote.quote-post p {
   line-height: 30px;
   font-size: 20px;
-  color: rgb(247, 87, 87);
+  color: #44A36F;
 }
 
 .single-blog {
@@ -1087,7 +1087,7 @@ h3.quote::before {
   color: #000;
 }
 .next-prev a:hover {
-  color: rgb(247, 87, 87);
+  color: #44A36F;
 }
 .next-prev .prev-post i {
   margin-right: 10px;
@@ -1106,7 +1106,7 @@ h3.quote::before {
   font-size: 16px;
 }
 .social-profile ul li a i:hover {
-  color: rgb(247, 87, 87);
+  color: #44A36F;
 }
 
 .comments-section {
@@ -1150,7 +1150,7 @@ h3.quote::before {
   margin-bottom: 8px;
 }
 .comment-wrap .media .media-heading a {
-  color: rgb(247, 87, 87);
+  color: #44A36F;
   font-size: 13px;
 }
 .comment-wrap .media .comment-meta {
@@ -1171,7 +1171,7 @@ h3.quote::before {
 }
 .comment-reply-form input:focus, .comment-reply-form textarea:focus {
   box-shadow: none;
-  border: 1px solid rgb(247, 87, 87);
+  border: 1px solid #44A36F;
 }
 .comment-reply-form textarea, .comment-reply-form .btn-main, .comment-reply-form .btn-transparent, .comment-reply-form .btn-small {
   height: auto;
@@ -1212,7 +1212,7 @@ h3.quote::before {
   padding-right: 10px;
 }
 .widget.widget-category ul li a:hover {
-  color: rgb(247, 87, 87);
+  color: #44A36F;
   padding-left: 5px;
 }
 .widget.widget-tag ul li {
@@ -1231,8 +1231,8 @@ h3.quote::before {
 }
 .widget.widget-tag ul li a:hover {
   color: #fff;
-  background: rgb(247, 87, 87);
-  border: 1px solid rgb(247, 87, 87);
+  background: #44A36F;
+  border: 1px solid #44A36F;
 }
 
 .footer {
@@ -1252,7 +1252,7 @@ h3.quote::before {
   letter-spacing: 1px;
 }
 .logo span {
-  color: rgb(247, 87, 87);
+  color: #44A36F;
 }
 
 .sub-form {
@@ -1278,7 +1278,7 @@ h3.quote::before {
   z-index: 999;
   height: 40px;
   width: 40px;
-  background: rgb(247, 87, 87);
+  background: #44A36F;
   border-radius: 50%;
   text-align: center;
   line-height: 43px;

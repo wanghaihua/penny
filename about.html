@@ -33,6 +33,7 @@
 
   <!-- Main Stylesheet -->
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/lang-switcher.css">
   
   <!--Favicon-->
   <link rel="icon" href="images/favicon.png" type="image/x-icon">
@@ -57,6 +58,16 @@
           <div class="header-top-info mb-2 mb-md-0">
             <a href="tel:+23-345-67890">Call Us : <span>+23-345-67890</span></a>
             <a href="mailto:support@gmail.com"><i class="fas fa-envelope mr-2"></i><span>support@gmail.com</span></a>
+            <div class="dropdown d-inline-block ml-3 header-top-lang">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="color: #919194; text-decoration: none;">
+                <i class="ti-world mr-1"></i> <span id="current-lang">EN</span>
+              </a>
+              <div class="dropdown-menu dropdown-menu-right">
+                <a class="dropdown-item" href="#" onclick="switchLang('zh')">🇨🇳 CN</a>
+                <a class="dropdown-item" href="#" onclick="switchLang('en')">🇺🇸 EN</a>
+                <a class="dropdown-item" href="#" onclick="switchLang('es')">🇪🇸 ES</a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -582,6 +593,7 @@ Essential Scripts
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCcABaamniA6OL5YvYSpB3pFMNrXwXnLwU" defer></script>
 <script src="plugins/google-map/map.js" defer></script>
 
+<script src="js/lang-switch.js"></script>
 <script src="js/script.js"></script>
 
 </body>

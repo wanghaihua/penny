@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Translation Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+        }
+
+        .test-section {
+            margin: 20px 0;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .lang-switcher {
+            margin-bottom: 30px;
+            padding: 15px;
+            background: #f5f5f5;
+            border-radius: 5px;
+        }
+
+        button {
+            margin: 5px;
+            padding: 10px 20px;
+            cursor: pointer;
+            border: none;
+            border-radius: 3px;
+            background: #44A36F;
+            color: white;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background: #2E7D52;
+        }
+
+        .current-lang {
+            font-weight: bold;
+            color: #44A36F;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>语言翻译测试 / Translation Test / Prueba de Traducción</h1>
+
+    <div class="lang-switcher">
+        <p>当前语言 / Current Language: <span class="current-lang" id="current-lang-display">English</span></p>
+        <button onclick="switchLang('en')">🇺🇸 English</button>
+        <button onclick="switchLang('zh')">🇨🇳 简体中文</button>
+        <button onclick="switchLang('es')">🇪🇸 Español</button>
+    </div>
+
+    <div class="test-section">
+        <h2 data-i18n="hero_title">Our work is presentation of our capabilities.</h2>
+        <p data-i18n="hero_subtitle">Prepare for new future</p>
+    </div>
+
+    <div class="test-section">
+        <h3 data-i18n="intro_card1_title">Modern & Responsive design</h3>
+        <p data-i18n="intro_card1_desc">Professional paper products with modern design and high quality standards.</p>
+    </div>
+
+    <div class="test-section">
+        <h3 data-i18n="service1_title">Custom Paper Solutions</h3>
+        <p data-i18n="service1_desc">We provide tailored paper products to meet your specific business needs.</p>
+    </div>
+
+    <div class="test-section">
+        <h3 data-i18n="about_title">We are dynamic team of creative people</h3>
+        <p data-i18n="about_desc">We provide high-quality paper products for businesses worldwide, helping companies
+            achieve their sustainability goals. We optimize production processes, making them more eco-friendly.</p>
+    </div>
+
+    <script src="js/lang-switch.js"></script>
+    <script>
+        // Override to update display
+        const originalSwitch = switchLang;
+        switchLang = function (lang) {
+            originalSwitch(lang);
+            const display = document.getElementById('current-lang-display');
+            if (lang === 'en') display.textContent = 'English';
+            else if (lang === 'zh') display.textContent = '简体中文';
+            else if (lang === 'es') display.textContent = 'Español';
+        };
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', function () {
+            const lang = localStorage.getItem('site-lang') || 'en';
+            switchLang(lang);
+        });
+    </script>
+</body>
+
+</html>

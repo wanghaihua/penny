@@ -1,0 +1,118 @@
+/* Language Switcher Custom Styles */
+.header-top-lang {
+    position: relative;
+}
+
+.header-top-lang .dropdown-toggle {
+    display: inline-flex;
+    align-items: center;
+    padding: 8px 15px;
+    border-radius: 20px;
+    background: rgba(68, 163, 111, 0.1);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(68, 163, 111, 0.3);
+    text-decoration: none !important;
+}
+
+.header-top-lang .dropdown-toggle:hover {
+    background: rgba(68, 163, 111, 0.2);
+    border-color: #44A36F;
+    transform: translateY(-2px);
+    box-shadow: 0 2px 8px rgba(68, 163, 111, 0.2);
+}
+
+.header-top-lang .dropdown-toggle i {
+    font-size: 16px;
+    color: #44A36F;
+    transition: transform 0.3s ease;
+}
+
+.header-top-lang .dropdown-toggle:hover i {
+    transform: rotate(15deg);
+}
+
+.header-top-lang #current-lang {
+    color: #fff;
+    font-weight: 500;
+    font-size: 13px;
+    letter-spacing: 0.5px;
+}
+
+.header-top-lang .dropdown-menu {
+    min-width: 140px;
+    max-width: 160px;
+    padding: 8px 0;
+    border: 1px solid rgba(68, 163, 111, 0.2);
+    border-radius: 8px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+    background: #fff;
+    margin-top: 10px;
+    left: auto !important;
+    right: -10px !important;
+    transform-origin: top right;
+}
+
+.header-top-lang .dropdown-item {
+    padding: 10px 15px;
+    font-size: 14px;
+    color: #242424;
+    transition: all 0.25s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    position: relative;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.header-top-lang .dropdown-item::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 3px;
+    background: #44A36F;
+    transform: scaleY(0);
+    transition: transform 0.25s ease;
+}
+
+.header-top-lang .dropdown-item:hover::before {
+    transform: scaleY(1);
+}
+
+.header-top-lang .dropdown-item:hover {
+    background: linear-gradient(90deg, rgba(68, 163, 111, 0.15) 0%, rgba(68, 163, 111, 0.05) 100%);
+    color: #2E7D52;
+    font-weight: 500;
+}
+
+.header-top-lang .dropdown-item:active {
+    background: rgba(68, 163, 111, 0.25);
+    color: #1E5437;
+}
+
+/* Add subtle animation */
+.header-top-lang .dropdown-menu {
+    animation: fadeInDown 0.3s ease;
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px) scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .header-top-lang .dropdown-menu {
+        left: 0 !important;
+        right: auto !important;
+    }
+}
