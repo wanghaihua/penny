@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>翻译管理器 - Translation Manager</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: #f5f7fa;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            opacity: 0.9;
+            font-size: 16px;
+        }
+
+        .controls {
+            padding: 20px 30px;
+            background: #f8f9fa;
+            border-bottom: 1px solid #e9ecef;
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .controls select,
+        .controls input,
+        .controls button {
+            padding: 10px 15px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-size: 14px;
+        }
+
+        .controls button {
+            background: #667eea;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-weight: 500;
+            transition: background 0.3s;
+        }
+
+        .controls button:hover {
+            background: #5568d3;
+        }
+
+        .controls .btn-success {
+            background: #28a745;
+        }
+
+        .controls .btn-success:hover {
+            background: #218838;
+        }
+
+        .controls .btn-danger {
+            background: #dc3545;
+        }
+
+        .controls .btn-danger:hover {
+            background: #c82333;
+        }
+
+        .editor-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 1px;
+            background: #e9ecef;
+        }
+
+        .lang-column {
+            background: white;
+            padding: 20px;
+        }
+
+        .lang-header {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #667eea;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .lang-header .flag {
+            font-size: 24px;
+        }
+
+        .translation-group {
+            margin-bottom: 25px;
+        }
+
+        .group-title {
+            font-size: 14px;
+            font-weight: 600;
+            color: #667eea;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .translation-item {
+            margin-bottom: 15px;
+        }
+
+        .translation-item label {
+            display: block;
+            font-size: 12px;
+            color: #6c757d;
+            margin-bottom: 5px;
+            font-family: 'Courier New', monospace;
+        }
+
+        .translation-item input,
+        .translation-item textarea {
+            width: 100%;
+            padding: 8px 12px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 14px;
+            transition: border-color 0.3s;
+        }
+
+        .translation-item input:focus,
+        .translation-item textarea:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+
+        .translation-item textarea {
+            min-height: 60px;
+            resize: vertical;
+            font-family: inherit;
+        }
+
+        .stats {
+            padding: 20px 30px;
+            background: #f8f9fa;
+            border-top: 1px solid #e9ecef;
+            display: flex;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .stat-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .stat-item .icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+        }
+
+        .stat-item .icon.blue {
+            background: #e7f3ff;
+            color: #667eea;
+        }
+
+        .stat-item .icon.green {
+            background: #d4edda;
+            color: #28a745;
+        }
+
+        .stat-item .icon.orange {
+            background: #fff3cd;
+            color: #ffc107;
+        }
+
+        .stat-item .info {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .stat-item .label {
+            font-size: 12px;
+            color: #6c757d;
+        }
+
+        .stat-item .value {
+            font-size: 20px;
+            font-weight: 600;
+            color: #333;
+        }
+
+        .notification {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            padding: 15px 20px;
+            background: #28a745;
+            color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            display: none;
+            animation: slideIn 0.3s ease;
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateX(400px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        .search-box {
+            flex: 1;
+            min-width: 200px;
+        }
+
+        @media (max-width: 1200px) {
+            .editor-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🌍 翻译管理器</h1>
+            <p>轻松管理您的多语言网站内容</p>
+        </div>
+
+        <div class="controls">
+            <select id="sectionFilter">
+                <option value="all">所有模块 All Sections</option>
+            </select>
+            <input type="text" id="searchBox" class="search-box" placeholder="搜索翻译键... Search keys...">
+            <button onclick="loadTranslations()">🔄 重新加载 Reload</button>
+            <button onclick="exportTranslations()" class="btn-success">💾 导出 JSON Export</button>
+            <button onclick="validateTranslations()" class="btn-danger">✓ 验证 Validate</button>
+        </div>
+
+        <div class="editor-container" id="editorContainer">
+            <div class="lang-column">
+                <div class="lang-header">
+                    <span class="flag">🇺🇸</span>
+                    <span>English</span>
+                </div>
+                <div id="enContent"></div>
+            </div>
+            <div class="lang-column">
+                <div class="lang-header">
+                    <span class="flag">🇨🇳</span>
+                    <span>简体中文</span>
+                </div>
+                <div id="zhContent"></div>
+            </div>
+            <div class="lang-column">
+                <div class="lang-header">
+                    <span class="flag">🇪🇸</span>
+                    <span>Español</span>
+                </div>
+                <div id="esContent"></div>
+            </div>
+        </div>
+
+        <div class="stats">
+            <div class="stat-item">
+                <div class="icon blue">📝</div>
+                <div class="info">
+                    <span class="label">总翻译数</span>
+                    <span class="value" id="totalKeys">0</span>
+                </div>
+            </div>
+            <div class="stat-item">
+                <div class="icon green">✓</div>
+                <div class="info">
+                    <span class="label">已完成</span>
+                    <span class="value" id="completedKeys">0</span>
+                </div>
+            </div>
+            <div class="stat-item">
+                <div class="icon orange">⚠</div>
+                <div class="info">
+                    <span class="label">缺失</span>
+                    <span class="value" id="missingKeys">0</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="notification" id="notification"></div>
+
+    <script>
+        let translations = { en: {}, zh: {}, es: {} };
+        let currentSection = 'all';
+
+        async function loadTranslations() {
+            try {
+                const langs = ['en', 'zh', 'es'];
+                for (const lang of langs) {
+                    const response = await fetch(`translations/${lang}.json`);
+                    translations[lang] = await response.json();
+                }
+                renderEditor();
+                updateStats();
+                showNotification('翻译加载成功! Translations loaded successfully!');
+            } catch (error) {
+                showNotification('加载失败: ' + error.message, 'error');
+            }
+        }
+
+        function renderEditor() {
+            const sections = Object.keys(translations.en);
+            const sectionFilter = document.getElementById('sectionFilter');
+            sectionFilter.innerHTML = '<option value="all">所有模块 All Sections</option>';
+            sections.forEach(section => {
+                const option = document.createElement('option');
+                option.value = section;
+                option.textContent = section;
+                sectionFilter.appendChild(option);
+            });
+
+            renderContent();
+        }
+
+        function renderContent() {
+            const enContent = document.getElementById('enContent');
+            const zhContent = document.getElementById('zhContent');
+            const esContent = document.getElementById('esContent');
+
+            enContent.innerHTML = '';
+            zhContent.innerHTML = '';
+            esContent.innerHTML = '';
+
+            const searchTerm = document.getElementById('searchBox').value.toLowerCase();
+
+            for (const section in translations.en) {
+                if (currentSection !== 'all' && section !== currentSection) continue;
+
+                const enGroup = createGroup(section, 'en');
+                const zhGroup = createGroup(section, 'zh');
+                const esGroup = createGroup(section, 'es');
+
+                for (const key in translations.en[section]) {
+                    if (searchTerm && !key.toLowerCase().includes(searchTerm)) continue;
+
+                    enGroup.appendChild(createInput(section, key, 'en'));
+                    zhGroup.appendChild(createInput(section, key, 'zh'));
+                    esGroup.appendChild(createInput(section, key, 'es'));
+                }
+
+                if (enGroup.children.length > 1) {
+                    enContent.appendChild(enGroup);
+                    zhContent.appendChild(zhGroup);
+                    esContent.appendChild(esGroup);
+                }
+            }
+        }
+
+        function createGroup(section, lang) {
+            const group = document.createElement('div');
+            group.className = 'translation-group';
+            const title = document.createElement('div');
+            title.className = 'group-title';
+            title.textContent = section;
+            group.appendChild(title);
+            return group;
+        }
+
+        function createInput(section, key, lang) {
+            const item = document.createElement('div');
+            item.className = 'translation-item';
+
+            const label = document.createElement('label');
+            label.textContent = key;
+            item.appendChild(label);
+
+            const value = translations[lang][section][key] || '';
+            const isLong = value.length > 50;
+
+            if (isLong) {
+                const textarea = document.createElement('textarea');
+                textarea.value = value;
+                textarea.onchange = () => updateTranslation(section, key, lang, textarea.value);
+                item.appendChild(textarea);
+            } else {
+                const input = document.createElement('input');
+                input.type = 'text';
+                input.value = value;
+                input.onchange = () => updateTranslation(section, key, lang, input.value);
+                item.appendChild(input);
+            }
+
+            return item;
+        }
+
+        function updateTranslation(section, key, lang, value) {
+            translations[lang][section][key] = value;
+            updateStats();
+        }
+
+        function updateStats() {
+            let total = 0;
+            let completed = 0;
+            let missing = 0;
+
+            for (const section in translations.en) {
+                for (const key in translations.en[section]) {
+                    total++;
+                    const hasEn = translations.en[section][key];
+                    const hasZh = translations.zh[section] && translations.zh[section][key];
+                    const hasEs = translations.es[section] && translations.es[section][key];
+
+                    if (hasEn && hasZh && hasEs) {
+                        completed++;
+                    } else {
+                        missing++;
+                    }
+                }
+            }
+
+            document.getElementById('totalKeys').textContent = total;
+            document.getElementById('completedKeys').textContent = completed;
+            document.getElementById('missingKeys').textContent = missing;
+        }
+
+        function exportTranslations() {
+            const langs = ['en', 'zh', 'es'];
+            langs.forEach(lang => {
+                const dataStr = JSON.stringify(translations[lang], null, 2);
+                const dataBlob = new Blob([dataStr], { type: 'application/json' });
+                const url = URL.createObjectURL(dataBlob);
+                const link = document.createElement('a');
+                link.href = url;
+                link.download = `${lang}.json`;
+                link.click();
+            });
+            showNotification('翻译文件已导出! Translation files exported!');
+        }
+
+        function validateTranslations() {
+            const issues = [];
+            for (const section in translations.en) {
+                for (const key in translations.en[section]) {
+                    if (!translations.zh[section] || !translations.zh[section][key]) {
+                        issues.push(`Missing ZH: ${section}.${key}`);
+                    }
+                    if (!translations.es[section] || !translations.es[section][key]) {
+                        issues.push(`Missing ES: ${section}.${key}`);
+                    }
+                }
+            }
+
+            if (issues.length === 0) {
+                showNotification('✓ 所有翻译完整! All translations complete!');
+            } else {
+                alert('发现问题 Issues found:\n\n' + issues.join('\n'));
+            }
+        }
+
+        function showNotification(message, type = 'success') {
+            const notification = document.getElementById('notification');
+            notification.textContent = message;
+            notification.style.background = type === 'error' ? '#dc3545' : '#28a745';
+            notification.style.display = 'block';
+            setTimeout(() => {
+                notification.style.display = 'none';
+            }, 3000);
+        }
+
+        document.getElementById('sectionFilter').addEventListener('change', (e) => {
+            currentSection = e.target.value;
+            renderContent();
+        });
+
+        document.getElementById('searchBox').addEventListener('input', renderContent);
+
+        // Load translations on page load
+        loadTranslations();
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,120 @@
+{
+  "navigation": {
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "portfolio": "Portfolio",
+    "contact": "Contact",
+    "get_quote": "Get a Quote",
+    "call_us": "Call Us"
+  },
+  "common": {
+    "our_company": "Our company",
+    "pricing": "Pricing",
+    "submenu": "Sub Menu",
+    "submenu_01": "Submenu 01",
+    "submenu_02": "Submenu 02"
+  },
+  "hero": {
+    "hero_subtitle": "Prepare for new future",
+    "hero_title": "Our work is <br>presentation of our <br>capabilities.",
+    "hero_btn": "Get started"
+  },
+  "intro": {
+    "intro_subtitle": "We are creative & expert people",
+    "intro_title": "We work with business & provide solution to client with their business problem",
+    "intro_card1_title": "Modern & Responsive design",
+    "intro_card1_desc": "Professional paper products with modern design and high quality standards.",
+    "intro_card2_title": "Awarded licensed company",
+    "intro_card2_desc": "Certified and awarded for excellence in sustainable paper manufacturing.",
+    "intro_card3_title": "Build your business Professionally",
+    "intro_card3_desc": "Partner with us for professional, eco-friendly paper solutions."
+  },
+  "about": {
+    "about_subtitle": "What we are",
+    "about_title": "We are dynamic team of creative people",
+    "about_heading": "We are Perfect Solution",
+    "about_desc": "We provide high-quality paper products for businesses worldwide, helping companies achieve their sustainability goals. We optimize production processes, making them more eco-friendly.",
+    "about_btn": "Get started",
+    "page_about_title": "About Us",
+    "page_about_heading": "Our Company",
+    "about_page_subtitle": "What we are",
+    "about_page_title": "Yame is a Professional Supplier for Household Products",
+    "about_page_desc": "The Main Products are Parent Roll and Finished Products such as Toilet Paper, Kitchen Paper, Napkin Paper, Paper Towel, Facial Tissue Paper, Pocket Tissue Paper etc.",
+    "about_page_content": "For over 18 years, We are mainly working with china and vietnam mills. We supply all major grades for the away from home and at home markets, including bath, towel, napkin, facial, and specialty grades as Bamboo, Recycled etc that allows us to offer our clients a wide selection of optimal tissue roll solutions.",
+    "mission_title": "Our Mission",
+    "mission_desc": "Providing sustainable, high-quality paper solutions that meet the evolving needs of businesses worldwide.",
+    "vision_title": "Vision",
+    "vision_desc": "To be the leading global supplier of eco-friendly paper products, setting industry standards for quality and sustainability.",
+    "approach_title": "Our Approach",
+    "approach_desc": "We combine innovation with traditional craftsmanship to deliver exceptional paper products while minimizing environmental impact."
+  },
+  "team": {
+    "team_subtitle": "Our Team",
+    "team_title": "Expert Team member to get best service"
+  },
+  "counter": {
+    "counter_projects": "Projects Done",
+    "counter_users": "Customers Worldwide",
+    "counter_countries": "Available Countries",
+    "counter_awards": "Awards Won"
+  },
+  "services": {
+    "services_subtitle": "Our Services",
+    "services_title": "We provide a wide range of creative services",
+    "page_services_title": "Our services",
+    "page_services_heading": "What We Do",
+    "service1_title": "Custom Paper Solutions",
+    "service1_desc": "We provide tailored paper products to meet your specific business needs.",
+    "service2_title": "Sustainable Production",
+    "service2_desc": "Eco-friendly manufacturing processes that minimize environmental impact.",
+    "service3_title": "Business Consulting",
+    "service3_desc": "Expert guidance on paper product selection and sustainable practices.",
+    "service4_title": "Quality Assurance",
+    "service4_desc": "Rigorous quality control ensuring premium paper products every time.",
+    "service5_title": "Global Distribution",
+    "service5_desc": "Worldwide shipping and logistics for timely delivery of your orders.",
+    "service6_title": "Custom Packaging",
+    "service6_desc": "Branded packaging solutions that enhance your product presentation."
+  },
+  "contact": {
+    "page_contact_title": "Contact Us",
+    "page_contact_heading": "Get in Touch",
+    "contact_form_title": "Contact Form",
+    "contact_name": "Your Name",
+    "contact_email": "Email Address",
+    "contact_message": "Your Message",
+    "contact_send": "Send Message",
+    "contact_subtitle": "We are Professionals",
+    "contact_desc": "Don't Hesitate to contact with us for any kind of information"
+  },
+  "cta": {
+    "cta_subtitle": "We create for you",
+    "cta_title": "Entrust Your Project to Our Best Team of Professionals",
+    "cta_desc": "Have any project on mind? For immediate support:",
+    "cta_business": "For Every type business",
+    "contact_us": "Contact Us"
+  },
+  "testimonial": {
+    "testimonial_subtitle": "Clients testimonial",
+    "testimonial_title": "Check what's our clients say about us"
+  },
+  "blog": {
+    "learn_more": "Learn More"
+  },
+  "footer": {
+    "footer_company": "Company",
+    "footer_terms": "Terms & Conditions",
+    "footer_privacy": "Privacy Policy",
+    "footer_support": "Support",
+    "footer_faq": "FAQ",
+    "footer_quick_links": "Quick Links",
+    "footer_about": "About",
+    "footer_services": "Services",
+    "footer_contact": "Contact",
+    "footer_subscribe": "Subscribe Us",
+    "footer_subscribe_desc": "Subscribe to get latest news article and resources",
+    "footer_subscribe_placeholder": "Subscribe Now ...",
+    "footer_subscribe_btn": "Subscribe"
+  }
+}

@@ -441,4 +441,50 @@ function switchLang(lang) {
 document.addEventListener('DOMContentLoaded', function () {
     const lang = localStorage.getItem('site-lang') || 'en';
     switchLang(lang);
+
+    // Fix for mobile dropdown - ensure language switcher works on touch devices
+    const langToggle = document.querySelector('.header-top-lang .dropdown-toggle');
+    const langDropdown = document.querySelector('.header-top-lang .dropdown-menu');
+
+    if (langToggle && langDropdown) {
+        // Add touch event support for mobile devices
+        langToggle.addEventListener('click', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            // Toggle the dropdown
+            const isOpen = langDropdown.classList.contains('show');
+
+            // Close all other dropdowns first
+            document.querySelectorAll('.dropdown-menu.show').forEach(menu => {
+                if (menu !== langDropdown) {
+                    menu.classList.remove('show');
+                }
+            });
+
+            // Toggle this dropdown
+            if (isOpen) {
+                langDropdown.classList.remove('show');
+            } else {
+                langDropdown.classList.add('show');
+            }
+        });
+
+        // Close dropdown when clicking outside
+        document.addEventListener('click', function (e) {
+            if (!langToggle.contains(e.target) && !langDropdown.contains(e.target)) {
+                langDropdown.classList.remove('show');
+            }
+        });
+
+        // Close dropdown after selecting a language
+        const langItems = langDropdown.querySelectorAll('.dropdown-item');
+        langItems.forEach(item => {
+            item.addEventListener('click', function () {
+                setTimeout(() => {
+                    langDropdown.classList.remove('show');
+                }, 100);
+            });
+        });
+    }
 });

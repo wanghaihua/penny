@@ -1,0 +1,120 @@
+{
+    "navigation": {
+        "home": "首页",
+        "about": "关于我们",
+        "services": "服务",
+        "portfolio": "案例",
+        "contact": "联系我们",
+        "get_quote": "获取报价",
+        "call_us": "致电我们"
+    },
+    "common": {
+        "our_company": "我们的公司",
+        "pricing": "价格",
+        "submenu": "子菜单",
+        "submenu_01": "子菜单 01",
+        "submenu_02": "子菜单 02"
+    },
+    "hero": {
+        "hero_subtitle": "为新未来做准备",
+        "hero_title": "我们的工作是<br>我们能力的<br>展示。",
+        "hero_btn": "开始使用"
+    },
+    "intro": {
+        "intro_subtitle": "我们是富有创造力的专家",
+        "intro_title": "我们与企业合作,为客户的业务问题提供解决方案",
+        "intro_card1_title": "现代化响应式设计",
+        "intro_card1_desc": "具有现代设计和高质量标准的专业纸制品。",
+        "intro_card2_title": "获奖的持牌公司",
+        "intro_card2_desc": "因在可持续纸张制造方面的卓越表现而获得认证和奖励。",
+        "intro_card3_title": "专业打造您的业务",
+        "intro_card3_desc": "与我们合作,获得专业、环保的纸张解决方案。"
+    },
+    "about": {
+        "about_subtitle": "我们是谁",
+        "about_title": "我们是充满活力的创意团队",
+        "about_heading": "我们是完美的解决方案",
+        "about_desc": "我们为全球企业提供高质量的纸制品,帮助公司实现可持续发展目标。我们优化生产流程,使其更加环保。",
+        "about_btn": "开始使用",
+        "page_about_title": "关于我们",
+        "page_about_heading": "我们的公司",
+        "about_page_subtitle": "我们是谁",
+        "about_page_title": "Yame 是专业的家居用品供应商",
+        "about_page_desc": "主要产品包括原纸卷和成品,如卫生纸、厨房纸、餐巾纸、纸巾、面巾纸、袖珍纸巾等。",
+        "about_page_content": "超过18年来,我们主要与中国和越南的工厂合作。我们为家用和商用市场提供所有主要等级的产品,包括浴室用纸、毛巾、餐巾、面巾以及竹浆、再生纸等特殊等级,使我们能够为客户提供广泛的最佳纸卷解决方案。",
+        "mission_title": "我们的使命",
+        "mission_desc": "提供可持续的高质量纸张解决方案,满足全球企业不断发展的需求。",
+        "vision_title": "愿景",
+        "vision_desc": "成为全球领先的环保纸制品供应商,为质量和可持续性树立行业标准。",
+        "approach_title": "我们的方法",
+        "approach_desc": "我们将创新与传统工艺相结合,在最大限度减少环境影响的同时提供卓越的纸制品。"
+    },
+    "team": {
+        "team_subtitle": "我们的团队",
+        "team_title": "专业团队成员为您提供最佳服务"
+    },
+    "counter": {
+        "counter_projects": "已完成项目",
+        "counter_users": "全球客户",
+        "counter_countries": "覆盖国家",
+        "counter_awards": "获得奖项"
+    },
+    "services": {
+        "services_subtitle": "我们的服务",
+        "services_title": "我们提供广泛的创意服务",
+        "page_services_title": "我们的服务",
+        "page_services_heading": "我们做什么",
+        "service1_title": "定制纸张解决方案",
+        "service1_desc": "我们提供量身定制的纸制品,满足您的特定业务需求。",
+        "service2_title": "可持续生产",
+        "service2_desc": "环保的制造工艺,最大限度地减少对环境的影响。",
+        "service3_title": "业务咨询",
+        "service3_desc": "关于纸制品选择和可持续实践的专家指导。",
+        "service4_title": "质量保证",
+        "service4_desc": "严格的质量控制,确保每次都能提供优质的纸制品。",
+        "service5_title": "全球配送",
+        "service5_desc": "全球运输和物流,确保及时交付您的订单。",
+        "service6_title": "定制包装",
+        "service6_desc": "品牌包装解决方案,提升您的产品展示效果。"
+    },
+    "contact": {
+        "page_contact_title": "联系我们",
+        "page_contact_heading": "取得联系",
+        "contact_form_title": "联系表单",
+        "contact_name": "您的姓名",
+        "contact_email": "电子邮箱",
+        "contact_message": "您的留言",
+        "contact_send": "发送消息",
+        "contact_subtitle": "我们是专业人士",
+        "contact_desc": "如有任何信息需求,请随时与我们联系"
+    },
+    "cta": {
+        "cta_subtitle": "我们为您创造",
+        "cta_title": "将您的项目委托给我们最好的专业团队",
+        "cta_desc": "有任何项目想法吗?立即获得支持:",
+        "cta_business": "适用于各类企业",
+        "contact_us": "联系我们"
+    },
+    "testimonial": {
+        "testimonial_subtitle": "客户评价",
+        "testimonial_title": "看看我们的客户对我们的评价"
+    },
+    "blog": {
+        "learn_more": "了解更多"
+    },
+    "footer": {
+        "footer_company": "公司",
+        "footer_terms": "条款与条件",
+        "footer_privacy": "隐私政策",
+        "footer_support": "支持",
+        "footer_faq": "常见问题",
+        "footer_quick_links": "快速链接",
+        "footer_about": "关于",
+        "footer_services": "服务",
+        "footer_contact": "联系",
+        "footer_subscribe": "订阅我们",
+        "footer_subscribe_desc": "订阅以获取最新新闻文章和资源",
+        "footer_subscribe_placeholder": "立即订阅...",
+        "footer_subscribe_btn": "订阅"
+    }
+}
