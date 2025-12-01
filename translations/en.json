@@ -3,7 +3,7 @@
     "home": "Home",
     "about": "About",
     "services": "Services",
-    "portfolio": "Portfolio",
+    "portfolio": "Products",
     "contact": "Contact",
     "get_quote": "Get a Quote",
     "call_us": "Call Us"
@@ -23,7 +23,7 @@
   "intro": {
     "intro_subtitle": "Comprehensive Product Range",
     "intro_title": "From Parent Rolls to finished goods: Toilet Paper, Kitchen Towels, Napkins, and Facial Tissues tailored to your needs.",
-    "intro_card1_title": "Modern & Responsive design",
+    "intro_card1_title": "Professional & Quality",
     "intro_card1_desc": "Professional paper products with modern design and high quality standards.",
     "intro_card2_title": "Awarded licensed company",
     "intro_card2_desc": "Certified and awarded for excellence in sustainable paper manufacturing.",

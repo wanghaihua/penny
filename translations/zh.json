@@ -3,7 +3,7 @@
         "home": "首页",
         "about": "关于我们",
         "services": "服务",
-        "portfolio": "案例",
+        "portfolio": "产品",
         "contact": "联系我们",
         "get_quote": "获取报价",
         "call_us": "致电我们"
@@ -16,14 +16,14 @@
         "submenu_02": "子菜单 02"
     },
     "hero": {
-        "hero_subtitle": "为新未来做准备",
-        "hero_title": "我们的工作是<br>我们能力的<br>展示。",
-        "hero_btn": "开始使用"
+        "hero_subtitle": "您的家庭用纸终极伙伴",
+        "hero_title": "超过十八年的<br>卓越<br>采购和出口经验。",
+        "hero_btn": "立即开始"
     },
     "intro": {
-        "intro_subtitle": "我们是富有创造力的专家",
-        "intro_title": "我们与企业合作,为客户的业务问题提供解决方案",
-        "intro_card1_title": "现代化响应式设计",
+        "intro_subtitle": "全面的产品系列",
+        "intro_title": "从母卷到成品：根据您的需求量身定制卫生纸、厨房用纸、餐巾纸和面巾纸",
+        "intro_card1_title": "专业且高质",
         "intro_card1_desc": "具有现代设计和高质量标准的专业纸制品。",
         "intro_card2_title": "获奖的持牌公司",
         "intro_card2_desc": "因在可持续纸张制造方面的卓越表现而获得认证和奖励。",
