@@ -67,9 +67,12 @@
                   <i class="ti-world mr-1"></i> <span id="current-lang">EN</span>
                 </a>
                 <div class="dropdown-menu dropdown-menu-right">
-                  <a class="dropdown-item" href="#" onclick="switchLang('zh')">🇨🇳 CN</a>
-                  <a class="dropdown-item" href="#" onclick="switchLang('en')">🇺🇸 EN</a>
-                  <a class="dropdown-item" href="#" onclick="switchLang('es')">🇪🇸 ES</a>
+                  <a class="dropdown-item" href="#" data-lang="zh"><span class="lang-flag">🇨🇳</span><span
+                      class="lang-name">中文</span></a>
+                  <a class="dropdown-item" href="#" data-lang="en"><span class="lang-flag">🇺🇸</span><span
+                      class="lang-name">English</span></a>
+                  <a class="dropdown-item" href="#" data-lang="es"><span class="lang-flag">🇪🇸</span><span
+                      class="lang-name">Español</span></a>
                 </div>
               </div>
             </div>
@@ -263,35 +266,35 @@
       <div class="row">
         <div class="col-lg-3 col-md-6 col-sm-6">
           <div class="widget">
-            <h4 class="text-capitalize mb-4">Company</h4>
+            <h4 class="text-capitalize mb-4" data-i18n="footer_company">Company</h4>
 
             <ul class="list-unstyled footer-menu lh-35">
-              <li><a href="about.html">Terms & Conditions</a></li>
-              <li><a href="about.html">Privacy Policy</a></li>
-              <li><a href="cobtact.html">Support</a></li>
-              <li><a href="cobtact.html">FAQ</a></li>
+              <li><a href="about.html" data-i18n="footer_terms">Terms & Conditions</a></li>
+              <li><a href="about.html" data-i18n="footer_privacy">Privacy Policy</a></li>
+              <li><a href="contact.html" data-i18n="footer_support">Support</a></li>
+              <li><a href="contact.html" data-i18n="footer_faq">FAQ</a></li>
             </ul>
           </div>
         </div>
         <div class="col-lg-2 col-md-6 col-sm-6">
           <div class="widget">
-            <h4 class="text-capitalize mb-4">Quick Links</h4>
+            <h4 class="text-capitalize mb-4" data-i18n="footer_quick_links">Quick Links</h4>
 
             <ul class="list-unstyled footer-menu lh-35">
-              <li><a href="about.html">About</a></li>
-              <li><a href="service.html">Services</a></li>
-              <li><a href="contact.html">Contact</a></li>
+              <li><a href="about.html" data-i18n="footer_about">About</a></li>
+              <li><a href="service.html" data-i18n="footer_services">Services</a></li>
+              <li><a href="contact.html" data-i18n="footer_contact">Contact</a></li>
             </ul>
           </div>
         </div>
         <div class="col-lg-3 col-md-6 col-sm-6 mx-auto">
           <div class="widget">
-            <h4 class="text-capitalize mb-4">Subscribe Us</h4>
-            <p>Subscribe to get latest news article and resources </p>
+            <h4 class="text-capitalize mb-4" data-i18n="footer_subscribe">Subscribe Us</h4>
+            <p data-i18n="footer_subscribe_desc">Subscribe to get latest news article and resources </p>
 
             <form action="#" class="sub-form">
-              <input type="text" class="form-control mb-3" placeholder="Subscribe Now ...">
-              <a href="#" class="btn btn-main btn-small">subscribe</a>
+              <input type="text" class="form-control mb-3" data-i18n="footer_subscribe_placeholder" placeholder="Subscribe Now ...">
+              <a href="#" class="btn btn-main btn-small btn-round-full" data-i18n="footer_subscribe_btn">Subscribe</a>
             </form>
           </div>
         </div>
@@ -352,6 +355,7 @@ Essential Scripts
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCcABaamniA6OL5YvYSpB3pFMNrXwXnLwU" defer></script>
   <script src="plugins/google-map/map.js" defer></script>
 
+  <script src="js/embedded-translations.js"></script>
   <script src="js/lang-switch.js"></script>
   <script src="js/script.js"></script>
 

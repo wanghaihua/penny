@@ -72,9 +72,12 @@
 									<i class="ti-world mr-1"></i> <span id="current-lang">EN</span>
 								</a>
 								<div class="dropdown-menu dropdown-menu-right">
-									<a class="dropdown-item" href="#" onclick="switchLang('zh')">🇨🇳 CN</a>
-									<a class="dropdown-item" href="#" onclick="switchLang('en')">🇺🇸 EN</a>
-									<a class="dropdown-item" href="#" onclick="switchLang('es')">🇪🇸 ES</a>
+									<a class="dropdown-item" href="#" data-lang="zh"><span class="lang-flag">🇨🇳</span><span
+											class="lang-name">中文</span></a>
+									<a class="dropdown-item" href="#" data-lang="en"><span class="lang-flag">🇺🇸</span><span
+											class="lang-name">English</span></a>
+									<a class="dropdown-item" href="#" data-lang="es"><span class="lang-flag">🇪🇸</span><span
+											class="lang-name">Español</span></a>
 								</div>
 							</div>
 						</div>
@@ -89,7 +92,7 @@
 					<div class="col-lg-12">
 						<nav class="navbar navbar-expand-lg px-0 py-4">
 							<a class="navbar-brand" href="index.html">
-								Ya<span>me</menu>.</span>
+								Ya<span>me.</span>
 							</a>
 
 							<button class="navbar-toggler collapsed" type="button" data-toggle="collapse"
@@ -133,63 +136,92 @@
 			<div class="row">
 				<div class="col-lg-9 col-md-10">
 					<div class="block">
-						<span class="d-block mb-3 text-white text-capitalize" data-i18n="hero_subtitle">Prepare for new
-							future</span>
-						<h1 class="animated fadeInUp mb-5" data-i18n="hero_title">Our work is <br>presentation of our
-							<br>capabilities.
-						</h1>
-						<a href="#" class="btn btn-main animated fadeInUp btn-round-full" aria-label="Get started"
-							data-i18n="hero_btn">Get started<i class="btn-icon fa fa-angle-right ml-2"></i></a>
+						<span class="d-block mb-3 text-white text-capitalize" data-i18n="hero_subtitle">Trusted tissue
+							manufacturing & export partner</span>
+						<h1 class="animated fadeInUp mb-4" data-i18n="hero_title">Toilet Tissue, Kitchen Towels,
+							Napkins & Facial Tissue for Global Buyers</h1>
+						<div class="hero-actions">
+							<a href="contact.html" class="btn btn-main animated fadeInUp btn-round-full"
+								aria-label="Get Quote" data-i18n="hero_btn">Get a Quote<i
+									class="btn-icon fa fa-angle-right ml-2"></i></a>
+							<a href="project.html" class="btn btn-outline-light animated fadeInUp btn-round-full ml-3"
+								aria-label="View Products" data-i18n="hero_btn_secondary">View Products</a>
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 	</section>
-	<!-- Section Intro Start -->
+	<section class="trust-strip">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-3 col-md-6">
+					<div class="trust-item">
+						<h3>18+</h3>
+						<p data-i18n="trust_item1_desc">Years Export Experience</p>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-6">
+					<div class="trust-item">
+						<h3>60+</h3>
+						<p data-i18n="trust_item2_desc">Markets Served</p>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-6">
+					<div class="trust-item">
+						<h3>15-25</h3>
+						<p data-i18n="trust_item3_desc">Days Typical Lead Time</p>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-6">
+					<div class="trust-item">
+						<h3>OEM</h3>
+						<p data-i18n="trust_item4_desc">Private Label & Customized Packaging</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
 
 	<section class="section intro">
 		<div class="container">
 			<div class="row ">
 				<div class="col-lg-8">
 					<div class="section-title">
-						<span class="h6 text-color " data-i18n="intro_subtitle">We are creative & expert people</span>
-						<h2 class="mt-3 content-title" data-i18n="intro_title">We work with business & provide solution
-							to client with their business problem
-						</h2>
+						<span class="h6 text-color " data-i18n="intro_subtitle">Complete Tissue Product Portfolio</span>
+						<h2 class="mt-3 content-title" data-i18n="intro_title">From jumbo parent rolls to finished packs,
+							we supply reliable tissue products for retail, hospitality and foodservice markets.</h2>
 					</div>
 				</div>
 			</div>
 			<div class="row justify-content-center">
 				<div class="col-lg-4 col-md-6 col-12">
 					<div class="intro-item mb-5 mb-lg-0">
-						<i class="ti-desktop color-one"></i>
-						<h4 class="mt-4 mb-3" data-i18n="intro_card1_title">Modern & Responsive design</h4>
-						<p data-i18n="intro_card1_desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit,
-							ducimus.</p>
+						<i class="ti-package color-one"></i>
+						<h4 class="mt-4 mb-3" data-i18n="intro_card1_title">Stable Raw Material Supply</h4>
+						<p data-i18n="intro_card1_desc">Strong mill partnerships in China and Vietnam ensure stable quality,
+							price competitiveness and supply continuity.</p>
 					</div>
 				</div>
 				<div class="col-lg-4 col-md-6">
 					<div class="intro-item mb-5 mb-lg-0">
 						<i class="ti-medall color-one"></i>
-						<h4 class="mt-4 mb-3" data-i18n="intro_card2_title">Awarded licensed company</h4>
-						<p data-i18n="intro_card2_desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit,
-							ducimus.</p>
+						<h4 class="mt-4 mb-3" data-i18n="intro_card2_title">Strict Quality Control</h4>
+						<p data-i18n="intro_card2_desc">Every order follows inspection checkpoints for grammage, absorbency,
+							packing and loading quality before shipment.</p>
 					</div>
 				</div>
 				<div class="col-lg-4 col-md-12">
 					<div class="intro-item">
-						<i class="ti-layers-alt color-one"></i>
-						<h4 class="mt-4 mb-3" data-i18n="intro_card3_title">Build your website Professionally</h4>
-						<p data-i18n="intro_card3_desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit,
-							ducimus.</p>
+						<i class="ti-truck color-one"></i>
+						<h4 class="mt-4 mb-3" data-i18n="intro_card3_title">On-Time Global Delivery</h4>
+						<p data-i18n="intro_card3_desc">Experienced export team supports quick quotations, production
+							tracking and reliable booking for different destination markets.</p>
 					</div>
 				</div>
 			</div>
 		</div>
 	</section>
-
-	<!-- Section Intro END -->
-	<!-- Section About Start -->
 
 	<section class="section about position-relative">
 		<div class="bg-about"></div>
@@ -197,16 +229,15 @@
 			<div class="row">
 				<div class="col-lg-6 offset-lg-6 offset-md-0">
 					<div class="about-item ">
-						<span class="h6 text-color" data-i18n="about_subtitle">What we are</span>
-						<h2 class="mt-3 mb-4 position-relative content-title" data-i18n="about_title">We are dynamic
-							team of creative people</h2>
+						<span class="h6 text-color" data-i18n="about_subtitle">Who We Are</span>
+						<h2 class="mt-3 mb-4 position-relative content-title" data-i18n="about_title">A long-term tissue
+							sourcing and export partner for global distributors and brands</h2>
 						<div class="about-content">
-							<h4 class="mb-3 position-relative" data-i18n="about_heading">We are Perfect Solution</h4>
-							<p class="mb-5" data-i18n="about_desc">We provide consulting services in the area of IFRS
-								and management reporting, helping companies to reach their highest level. We optimize
-								business processes, making them easier.</p>
+							<h4 class="mb-3 position-relative" data-i18n="about_heading">Built for Professional Buyers</h4>
+							<p class="mb-5" data-i18n="about_desc">We focus on household and away-from-home tissue products,
+								offering flexible specifications, private labeling and stable delivery for recurring orders.</p>
 
-							<a href="#" class="btn btn-main btn-round-full" data-i18n="about_btn">Get started</a>
+							<a href="about.html" class="btn btn-main btn-round-full" data-i18n="about_btn">Learn More</a>
 						</div>
 					</div>
 				</div>
@@ -214,48 +245,45 @@
 		</div>
 	</section>
 
-	<!-- Section About End -->
-	<!-- section Counter Start -->
 	<section class="section counter">
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-3 col-md-6 col-sm-6">
 					<div class="counter-item text-center mb-5 mb-lg-0">
-						<h3 class="mb-0"><span class="counter-stat font-weight-bold">1730</span> +</h3>
-						<p class="text-muted" data-i18n="counter_projects">Project Done</p>
+						<h3 class="mb-0"><span class="counter-stat font-weight-bold">18</span> +</h3>
+						<p class="text-muted" data-i18n="counter_projects">Years Export Experience</p>
 					</div>
 				</div>
 				<div class="col-lg-3 col-md-6 col-sm-6">
 					<div class="counter-item text-center mb-5 mb-lg-0">
-						<h3 class="mb-0"><span class="counter-stat font-weight-bold">125 </span>M </h3>
-						<p class="text-muted" data-i18n="counter_users">User Worldwide</p>
+						<h3 class="mb-0"><span class="counter-stat font-weight-bold">60</span> +</h3>
+						<p class="text-muted" data-i18n="counter_users">Countries Served</p>
 					</div>
 				</div>
 				<div class="col-lg-3 col-md-6 col-sm-6">
 					<div class="counter-item text-center mb-5 mb-lg-0">
-						<h3 class="mb-0"><span class="counter-stat font-weight-bold">39</span></h3>
-						<p class="text-muted" data-i18n="counter_countries">Available Countries</p>
+						<h3 class="mb-0"><span class="counter-stat font-weight-bold">25</span></h3>
+						<p class="text-muted" data-i18n="counter_countries">Days Typical Lead Time</p>
 					</div>
 				</div>
 				<div class="col-lg-3 col-md-6 col-sm-6">
 					<div class="counter-item text-center">
-						<h3 class="mb-0"><span class="counter-stat font-weight-bold">14</span></h3>
-						<p class="text-muted" data-i18n="counter_awards">Award Winner</p>
+						<h3 class="mb-0"><span class="counter-stat font-weight-bold">300</span> +</h3>
+						<p class="text-muted" data-i18n="counter_awards">OEM / Private Label Projects</p>
 					</div>
 				</div>
 			</div>
 		</div>
 	</section>
-	<!-- section Counter End  -->
-	<!--  Section Services Start -->
+
 	<section class="section service border-top">
 		<div class="container">
 			<div class="row justify-content-center">
 				<div class="col-lg-7 text-center">
 					<div class="section-title">
-						<span class="h6 text-color" data-i18n="services_subtitle">Our Services</span>
-						<h2 class="mt-3 content-title " data-i18n="services_title">We provide a wide range of creative
-							services</h2>
+						<span class="h6 text-color" data-i18n="services_subtitle">Supply Capabilities</span>
+						<h2 class="mt-3 content-title " data-i18n="services_title">Flexible specifications and packaging
+							solutions for different channels</h2>
 					</div>
 				</div>
 			</div>
@@ -263,147 +291,117 @@
 			<div class="row justify-content-center">
 				<div class="col-lg-4 col-md-6 col-sm-6">
 					<div class="service-item mb-5">
-						<i class="ti-desktop"></i>
-						<h4 class="mb-3" data-i18n="service1_title">Web development.</h4>
-						<p data-i18n="service1_desc">A digital agency isn't here to replace your internal team, we're
-							here to partner</p>
+						<i class="ti-archive"></i>
+						<h4 class="mb-3" data-i18n="service1_title">Toilet Tissue</h4>
+						<p data-i18n="service1_desc">Virgin, recycled or bamboo options with flexible ply, sheet count and
+							embossing patterns for retail and institutional channels.</p>
 					</div>
 				</div>
 
 				<div class="col-lg-4 col-md-6 col-sm-6">
 					<div class="service-item mb-5">
-						<i class="ti-layers"></i>
-						<h4 class="mb-3" data-i18n="service2_title">Interface Design.</h4>
-						<p data-i18n="service2_desc">A digital agency isn't here to replace your internal team, we're
-							here to partner</p>
+						<i class="ti-cut"></i>
+						<h4 class="mb-3" data-i18n="service2_title">Kitchen Towels</h4>
+						<p data-i18n="service2_desc">High absorbency rolls and folded formats with customizable core size,
+							pack count and wrapping design.</p>
 					</div>
 				</div>
 
 				<div class="col-lg-4 col-md-6 col-sm-6">
 					<div class="service-item mb-5">
-						<i class="ti-bar-chart"></i>
-						<h4 class="mb-3" data-i18n="service3_title">Business Consulting.</h4>
-						<p data-i18n="service3_desc">A digital agency isn't here to replace your internal team, we're
-							here to partner</p>
+						<i class="ti-layout-accordion-list"></i>
+						<h4 class="mb-3" data-i18n="service3_title">Napkins & Dispenser Napkins</h4>
+						<p data-i18n="service3_desc">Dinner, cocktail and dispenser formats for restaurants, hotels and
+							catering supply chains.</p>
 					</div>
 				</div>
 
 				<div class="col-lg-4 col-md-6 col-sm-6">
 					<div class="service-item mb-5 mb-lg-0">
-						<i class="ti-vector"></i>
-						<h4 class="mb-3" data-i18n="service4_title">Branding.</h4>
-						<p data-i18n="service4_desc">A digital agency isn't here to replace your internal team, we're
-							here to partner</p>
-					</div>
-				</div>
-
-				<div class="col-lg-4 col-md-6 col-sm-6">
-					<div class="service-item mb-5 mb-lg-0">
-						<i class="ti-android"></i>
-						<h4 class="mb-3" data-i18n="service5_title">App development.</h4>
-						<p data-i18n="service5_desc">A digital agency isn't here to replace your internal team, we're
-							here to partner</p>
+						<i class="ti-face-smile"></i>
+						<h4 class="mb-3" data-i18n="service4_title">Facial Tissue</h4>
+						<p data-i18n="service4_desc">Softness-focused product lines with box and pocket configurations,
+							including private label artwork support.</p>
 					</div>
 				</div>
 
 				<div class="col-lg-4 col-md-6 col-sm-6">
 					<div class="service-item mb-5 mb-lg-0">
 						<i class="ti-pencil-alt"></i>
-						<h4 class="mb-3" data-i18n="service6_title">Content creation.</h4>
-						<p data-i18n="service6_desc">A digital agency isn't here to replace your internal team, we're
-							here to partner</p>
+						<h4 class="mb-3" data-i18n="service5_title">Custom Packaging</h4>
+						<p data-i18n="service5_desc">Design adaptation for barcodes, language compliance, carton marks and
+							pallet standards of your target market.</p>
+					</div>
+				</div>
+
+				<div class="col-lg-4 col-md-6 col-sm-6">
+					<div class="service-item mb-5 mb-lg-0">
+						<i class="ti-world"></i>
+						<h4 class="mb-3" data-i18n="service6_title">Export Coordination</h4>
+						<p data-i18n="service6_desc">From quotation to loading photos and shipment documents, we provide
+							clear communication for each order milestone.</p>
 					</div>
 				</div>
 			</div>
 		</div>
 	</section>
-	<!--  Section Services End -->
 
-	<!-- Section Cta Start -->
 	<section class="section cta">
 		<div class="container">
 			<div class="row">
-				<div class="col-xl-5 col-lg-6">
-					<div class="cta-item  bg-white p-5 rounded">
-						<span class="h6 text-color" data-i18n="cta_subtitle">We create for you</span>
-						<h2 class="mt-2 mb-4">Entrust Your Project to Our Best Team of Professionals</h2>
-						<p class="lead mb-4">Have any project on mind? For immidiate support :</p>
-						<h3><i class="ti-mobile mr-3 text-color"></i>+23 876 65 455</h3>
+				<div class="col-xl-7 col-lg-8">
+					<div class="cta-item bg-white p-5 rounded">
+						<span class="h6 text-color" data-i18n="cta_subtitle">Fast Quotation Support</span>
+						<h2 class="mt-2 mb-4" data-i18n="cta_title">Tell us your target market, specs and quantity, and get
+							a practical offer quickly.</h2>
+						<p class="lead mb-4" data-i18n="cta_desc">Preferred channels: Email and WhatsApp. We can discuss
+							specification details before final quotation.</p>
+						<div class="b2b-contact-row">
+							<a href="mailto:penny.liao@yametissue.com"><i class="ti-email mr-2 text-color"></i>penny.liao@yametissue.com</a>
+							<a href="tel:+8618678139489"><i class="ti-mobile mr-2 text-color"></i>+86 18678139489</a>
+						</div>
+						<a href="contact.html" class="btn btn-main btn-round-full mt-4" data-i18n="contact_us">Contact
+							Us</a>
 					</div>
 				</div>
 			</div>
 		</div>
 	</section>
-	<!--  Section Cta End-->
-	<!-- Section Testimonial Start -->
-	<section class="section testimonial">
+
+	<section class="section process-section bg-gray">
 		<div class="container">
-			<div class="row">
-				<div class="col-lg-7 ">
+			<div class="row justify-content-center">
+				<div class="col-lg-8 text-center">
 					<div class="section-title">
-						<span class="h6 text-color">Clients testimonial</span>
-						<h2 class="mt-3 content-title">Check what's our clients say about us</h2>
+						<span class="h6 text-color" data-i18n="process_subtitle">How We Work</span>
+						<h2 class="mt-3 content-title" data-i18n="process_title">Simple and transparent process for each
+							inquiry</h2>
 					</div>
 				</div>
 			</div>
-		</div>
-
-		<div class="container">
-			<div class="row testimonial-wrap">
-				<div class="testimonial-item position-relative">
-					<i class="ti-quote-left text-color"></i>
-
-					<div class="testimonial-item-content">
-						<p class="testimonial-text">Quam maiores perspiciatis temporibus odio reiciendis error alias
-							debitis atque
-							consequuntur natus iusto recusandae numquam corrupti facilis blanditiis.</p>
-
-						<div class="testimonial-author">
-							<h5 class="mb-0 text-capitalize">Thomas Johnson</h5>
-							<p>Excutive Director,themefisher</p>
-						</div>
+			<div class="row">
+				<div class="col-lg-4 col-md-6">
+					<div class="process-card">
+						<span class="step-index">01</span>
+						<h4 data-i18n="process_step1_title">Confirm Product Specs</h4>
+						<p data-i18n="process_step1_desc">Share product type, ply, size, packing format and monthly demand.
+							We align technical details first.</p>
 					</div>
 				</div>
-				<div class="testimonial-item position-relative">
-					<i class="ti-quote-left text-color"></i>
-
-					<div class="testimonial-item-content">
-						<p class="testimonial-text">Consectetur adipisicing elit. Quam maiores perspiciatis temporibus
-							odio reiciendis
-							error alias debitis atque consequuntur natus iusto recusandae .</p>
-
-						<div class="testimonial-author">
-							<h5 class="mb-0 text-capitalize">Mickel hussy</h5>
-							<p>Excutive Director,themefisher</p>
-						</div>
+				<div class="col-lg-4 col-md-6">
+					<div class="process-card">
+						<span class="step-index">02</span>
+						<h4 data-i18n="process_step2_title">Quotation & Sampling</h4>
+						<p data-i18n="process_step2_desc">Receive a structured quotation with lead time and MOQ. Samples can
+							be arranged for validation.</p>
 					</div>
 				</div>
-				<div class="testimonial-item position-relative">
-					<i class="ti-quote-left text-color"></i>
-
-					<div class="testimonial-item-content">
-						<p class="testimonial-text">Quam maiores perspiciatis temporibus odio reiciendis error alias
-							debitis atque
-							consequuntur natus iusto recusandae numquam corrupti.</p>
-
-						<div class="testimonial-author">
-							<h5 class="mb-0 text-capitalize">James Watson</h5>
-							<p>Excutive Director,themefisher</p>
-						</div>
-					</div>
-				</div>
-				<div class="testimonial-item position-relative">
-					<i class="ti-quote-left text-color"></i>
-
-					<div class="testimonial-item-content">
-						<p class="testimonial-text">Consectetur adipisicing elit. Quam maiores perspiciatis temporibus
-							odio reiciendis
-							error alias debitis atque consequuntur natus iusto recusandae .</p>
-
-						<div class="testimonial-author">
-							<h5 class="mb-0 text-capitalize">Mickel hussy</h5>
-							<p>Excutive Director,themefisher</p>
-						</div>
+				<div class="col-lg-4 col-md-12">
+					<div class="process-card">
+						<span class="step-index">03</span>
+						<h4 data-i18n="process_step3_title">Production & Shipment</h4>
+						<p data-i18n="process_step3_desc">After confirmation, we follow production schedule, QC, loading and
+							export documentation delivery.</p>
 					</div>
 				</div>
 			</div>
@@ -415,11 +413,13 @@
 			<div class="cta-block-2 bg-gray p-5 rounded border-1">
 				<div class="row justify-content-center align-items-center ">
 					<div class="col-lg-7">
-						<span class="text-color">For Every type business</span>
-						<h2 class="mt-2 mb-4 mb-lg-0">Entrust Your Project to Our Best Team of Professionals</h2>
+						<span class="text-color" data-i18n="cta_business">For Retail, Hospitality & Foodservice Buyers</span>
+						<h2 class="mt-2 mb-4 mb-lg-0" data-i18n="cta_final_title">Looking for a reliable tissue supplier for
+							long-term orders?</h2>
 					</div>
 					<div class="col-lg-4">
-						<a href="contact.html" class="btn btn-main btn-round-full float-lg-right ">Contact Us</a>
+						<a href="contact.html" class="btn btn-main btn-round-full float-lg-right " data-i18n="contact_us">Contact
+							Us</a>
 					</div>
 				</div>
 			</div>
@@ -431,35 +431,35 @@
 			<div class="row">
 				<div class="col-lg-3 col-md-6 col-sm-6">
 					<div class="widget">
-						<h4 class="text-capitalize mb-4">Company</h4>
+						<h4 class="text-capitalize mb-4" data-i18n="footer_company">Company</h4>
 
 						<ul class="list-unstyled footer-menu lh-35">
-							<li><a href="about.html">Terms & Conditions</a></li>
-							<li><a href="about.html">Privacy Policy</a></li>
-							<li><a href="cobtact.html">Support</a></li>
-							<li><a href="cobtact.html">FAQ</a></li>
+							<li><a href="about.html" data-i18n="footer_terms">Terms & Conditions</a></li>
+							<li><a href="about.html" data-i18n="footer_privacy">Privacy Policy</a></li>
+							<li><a href="contact.html" data-i18n="footer_support">Support</a></li>
+							<li><a href="contact.html" data-i18n="footer_faq">FAQ</a></li>
 						</ul>
 					</div>
 				</div>
 				<div class="col-lg-2 col-md-6 col-sm-6">
 					<div class="widget">
-						<h4 class="text-capitalize mb-4">Quick Links</h4>
+						<h4 class="text-capitalize mb-4" data-i18n="footer_quick_links">Quick Links</h4>
 
 						<ul class="list-unstyled footer-menu lh-35">
-							<li><a href="about.html">About</a></li>
-							<li><a href="service.html">Services</a></li>
-							<li><a href="contact.html">Contact</a></li>
+							<li><a href="about.html" data-i18n="footer_about">About</a></li>
+							<li><a href="service.html" data-i18n="footer_services">Services</a></li>
+							<li><a href="contact.html" data-i18n="footer_contact">Contact</a></li>
 						</ul>
 					</div>
 				</div>
 				<div class="col-lg-3 col-md-6 col-sm-6 mx-auto">
 					<div class="widget">
-						<h4 class="text-capitalize mb-4">Subscribe Us</h4>
-						<p>Subscribe to get latest news article and resources </p>
+						<h4 class="text-capitalize mb-4" data-i18n="footer_subscribe">Subscribe Us</h4>
+						<p data-i18n="footer_subscribe_desc">Subscribe to get latest news article and resources </p>
 
 						<form action="#" class="sub-form">
-							<input type="text" class="form-control mb-3" placeholder="Subscribe Now ...">
-							<a href="#" class="btn btn-main btn-small">subscribe</a>
+							<input type="text" class="form-control mb-3" data-i18n="footer_subscribe_placeholder" placeholder="Subscribe Now ...">
+							<a href="#" class="btn btn-main btn-small btn-round-full" data-i18n="footer_subscribe_btn">Subscribe</a>
 						</form>
 					</div>
 				</div>
@@ -522,7 +522,8 @@ Essential Scripts
 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCcABaamniA6OL5YvYSpB3pFMNrXwXnLwU" defer></script>
 	<script src="plugins/google-map/map.js" defer></script>
 
-	<script src="js/lang-switch.js"></script>
+	<script src="js/embedded-translations.js"></script>
+  <script src="js/lang-switch.js"></script>
 	<script src="js/script.js"></script>
 
 	<!-- WhatsApp Chat Button -->
