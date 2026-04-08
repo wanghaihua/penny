@@ -2,9 +2,9 @@
 let translations = {};
 const SUPPORTED_LANGS = ['en', 'zh', 'es'];
 const LANG_LABELS = {
-    en: 'EN',
-    zh: '中文',
-    es: 'ES'
+    en: { short: 'EN', name: 'English' },
+    zh: { short: '中文', name: '简体中文' },
+    es: { short: 'ES', name: 'Español' }
 };
 
 function flattenTranslationSections(data) {
@@ -116,6 +116,7 @@ function setActiveLanguageItem(lang) {
         const isActive = item.getAttribute('data-lang') === lang;
         item.classList.toggle('active', isActive);
         item.setAttribute('aria-pressed', String(isActive));
+        item.setAttribute('aria-current', isActive ? 'true' : 'false');
     });
 }
 
@@ -182,10 +183,19 @@ function applyTranslations(lang) {
 function switchLang(lang) {
     const normalizedLang = translations[lang] ? lang : 'en';
     localStorage.setItem('site-lang', normalizedLang);
+    document.documentElement.lang = normalizedLang;
 
+    const currentLang = LANG_LABELS[normalizedLang] || {
+        short: normalizedLang.toUpperCase(),
+        name: normalizedLang.toUpperCase()
+    };
     const langLabel = document.getElementById('current-lang');
+    const langName = document.getElementById('current-lang-name');
     if (langLabel) {
-        langLabel.innerText = LANG_LABELS[normalizedLang] || normalizedLang.toUpperCase();
+        langLabel.innerText = currentLang.short;
+    }
+    if (langName) {
+        langName.innerText = currentLang.name;
     }
 
     setActiveLanguageItem(normalizedLang);
@@ -249,7 +259,10 @@ document.addEventListener('DOMContentLoaded', function () {
     const langDropdown = document.querySelector('.header-top-lang .dropdown-menu');
 
     if (langToggle && langDropdown) {
-        langToggle.setAttribute('aria-expanded', 'false');
+        function closeLanguageMenu() {
+            langDropdown.classList.remove('show');
+            langToggle.setAttribute('aria-expanded', 'false');
+        }
 
         langToggle.addEventListener('click', function (e) {
             e.preventDefault();
@@ -273,8 +286,13 @@ document.addEventListener('DOMContentLoaded', function () {
 
         document.addEventListener('click', function (e) {
             if (!langToggle.contains(e.target) && !langDropdown.contains(e.target)) {
-                langDropdown.classList.remove('show');
-                langToggle.setAttribute('aria-expanded', 'false');
+                closeLanguageMenu();
+            }
+        });
+
+        document.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape') {
+                closeLanguageMenu();
             }
         });
     }

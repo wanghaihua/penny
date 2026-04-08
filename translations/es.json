@@ -77,8 +77,8 @@
   "services": {
     "services_subtitle": "Capacidades de Suministro",
     "services_title": "Especificaciones y soluciones de empaque flexibles para diferentes canales",
-    "page_services_title": "Nuestros servicios",
-    "page_services_heading": "Lo Que Hacemos",
+    "page_services_title": "Servicios y Soporte",
+    "page_services_heading": "OEM, Empaque y Coordinacion de Exportacion",
     "service1_title": "Papel Higiénico",
     "service1_desc": "Opciones de pulpa virgen, reciclada o bambú con capas, hojas y relieve ajustables para retail e institucional.",
     "service2_title": "Toallas de Cocina",
@@ -90,7 +90,22 @@
     "service5_title": "Empaque Personalizado",
     "service5_desc": "Adaptación de códigos de barras, idiomas, marcados de caja y estándar de pallets según su mercado objetivo.",
     "service6_title": "Coordinación de Exportación",
-    "service6_desc": "Desde cotización hasta fotos de carga y documentos de embarque, ofrecemos comunicación clara en cada etapa."
+    "service6_desc": "Desde cotización hasta fotos de carga y documentos de embarque, ofrecemos comunicación clara en cada etapa.",
+    "services_support_subtitle": "Soporte del Pedido",
+    "services_support_title": "Soporte practico desde el abastecimiento hasta el embarque",
+    "services_support_desc": "Ayudamos a los compradores con seleccion de producto, confirmacion de especificaciones, revision de empaque y ejecucion de exportacion para que cada pedido avance con menos sorpresas.",
+    "services_process_subtitle": "Flujo de Ejecucion",
+    "services_process_title": "Como apoyamos cada pedido",
+    "services_commitments_subtitle": "Prioridades del Comprador",
+    "services_commitments_title": "Las areas donde ayudamos a reducir riesgos",
+    "services_commitment1_title": "Alineacion de Especificaciones",
+    "services_commitment1_desc": "Confirmamos capas, tamano de hoja, gofrado y configuracion de empaque antes de cotizar para mantener alineadas las muestras y la produccion.",
+    "services_commitment2_title": "Revision de Arte y Empaque",
+    "services_commitment2_desc": "Revisamos ubicacion de codigo de barras, paneles de idioma, marcas de caja y estandares de pallet antes de iniciar la produccion.",
+    "services_commitment3_title": "Control de Calidad Pre-embarque",
+    "services_commitment3_desc": "La inspeccion cubre absorcion, gramaje, conteo, calidad de sellado y revision de carga antes de que la mercancia salga de fabrica.",
+    "services_commitment4_title": "Coordinacion Documental",
+    "services_commitment4_desc": "Coordinamos packing list, factura comercial, actualizaciones de reserva y fotos de carga para mantener el plan de importacion bajo control."
   },
   "project": {
     "project_page_badge": "Portafolio B2B de productos tissue",
@@ -198,6 +213,11 @@
     "footer_subscribe": "Suscríbete",
     "footer_subscribe_desc": "Suscríbete para recibir las últimas noticias y recursos",
     "footer_subscribe_placeholder": "Suscríbete Ahora...",
-    "footer_subscribe_btn": "Suscribirse"
+    "footer_subscribe_btn": "Suscribirse",
+    "footer_products": "Productos Clave",
+    "footer_quote_support": "Soporte de Cotizacion",
+    "footer_quote_support_desc": "Comparta mercado objetivo, especificaciones y volumen mensual para recibir un plan de cotizacion practico.",
+    "footer_brand_desc": "Abastecimiento de tissue, empaque OEM y coordinacion de exportacion para compradores globales.",
+    "footer_address": "B-1306, Fortune Plaza, Zhengyang Road, Zhoucun Dist, Zibo, Shandong, China"
   }
 }

@@ -9,20 +9,26 @@
 @import url("https://fonts.googleapis.com/css2?family=Hind:wght@400;500;600;700&family=Montserrat:wght@400;700&family=Poppins:wght@300;400;600;700&display=swap");
 
 :root {
-  --color-primary: #2E7D52;
-  --color-secondary: #44A36F;
-  --color-primary-dark: #1E5437;
-  --color-bg-page: #F6FAF8;
-  --color-card: #FFFFFF;
-  --color-text-primary: #24332C;
-  --color-text-secondary: #5C6B63;
-  --color-border: #DCE7E0;
-  --color-accent: #F2B84B;
-  --color-primary-soft: #EAF6EF;
-  --color-header-bg: #1F2A24;
-  --color-text-inverse: #FFFFFF;
-  --color-text-inverse-soft: #D4E4DC;
-  --color-border-soft: #EEF2F6;
+  --color-primary: #295844;
+  --color-secondary: #4A8A68;
+  --color-primary-dark: #16372B;
+  --color-bg-page: #F4F0E7;
+  --color-bg-alt: #E7ECE4;
+  --color-card: #FCFBF7;
+  --color-text-primary: #163127;
+  --color-text-secondary: #5A685F;
+  --color-border: #D6DED4;
+  --color-border-strong: #C2CFC3;
+  --color-accent: #C38C4A;
+  --color-accent-soft: #F3E4CF;
+  --color-primary-soft: #E4ECE4;
+  --color-header-bg: #0F251D;
+  --color-text-inverse: #F9F6EF;
+  --color-text-inverse-soft: #D9E3D7;
+  --color-border-soft: #E8E1D4;
+  --shadow-soft: 0 16px 36px rgba(22, 49, 39, 0.08);
+  --shadow-card: 0 22px 48px rgba(22, 49, 39, 0.1);
+  --shadow-strong: 0 28px 64px rgba(15, 37, 29, 0.2);
   --color-whatsapp: #25D366;
   --color-whatsapp-hover: #128C7E;
 }

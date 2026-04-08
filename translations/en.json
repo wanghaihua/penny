@@ -77,8 +77,8 @@
   "services": {
     "services_subtitle": "Supply Capabilities",
     "services_title": "Flexible specifications and packaging solutions for different channels",
-    "page_services_title": "Our services",
-    "page_services_heading": "What We Do",
+    "page_services_title": "Supply & Service Support",
+    "page_services_heading": "OEM, Packaging & Export Support",
     "service1_title": "Toilet Tissue",
     "service1_desc": "Virgin, recycled or bamboo options with flexible ply, sheet count and embossing patterns for retail and institutional channels.",
     "service2_title": "Kitchen Towels",
@@ -90,7 +90,22 @@
     "service5_title": "Custom Packaging",
     "service5_desc": "Design adaptation for barcodes, language compliance, carton marks and pallet standards of your target market.",
     "service6_title": "Export Coordination",
-    "service6_desc": "From quotation to loading photos and shipment documents, we provide clear communication for each order milestone."
+    "service6_desc": "From quotation to loading photos and shipment documents, we provide clear communication for each order milestone.",
+    "services_support_subtitle": "Order Support",
+    "services_support_title": "Practical services from sourcing to shipment",
+    "services_support_desc": "We support buyers with product matching, specification confirmation, packaging review and export execution so each order can move with fewer surprises.",
+    "services_process_subtitle": "Execution Flow",
+    "services_process_title": "How we support each order",
+    "services_commitments_subtitle": "Buyer Priorities",
+    "services_commitments_title": "The areas we help buyers de-risk",
+    "services_commitment1_title": "Specification Matching",
+    "services_commitment1_desc": "We help confirm ply, sheet size, embossing and pack count before quotation so sampling and production stay aligned.",
+    "services_commitment2_title": "Artwork & Packaging Review",
+    "services_commitment2_desc": "We review barcode placement, language panels, carton marks and pallet standards before production starts.",
+    "services_commitment3_title": "Pre-shipment Quality Control",
+    "services_commitment3_desc": "Inspection covers absorbency, grammage, count, sealing quality and loading checks before cargo leaves the factory.",
+    "services_commitment4_title": "Document Coordination",
+    "services_commitment4_desc": "We coordinate packing lists, commercial invoices, booking updates and loading photos to keep import planning on track."
   },
   "project": {
     "project_page_badge": "B2B Tissue Product Portfolio",
@@ -198,6 +213,11 @@
     "footer_subscribe": "Subscribe Us",
     "footer_subscribe_desc": "Subscribe to get latest news article and resources",
     "footer_subscribe_placeholder": "Subscribe Now ...",
-    "footer_subscribe_btn": "Subscribe"
+    "footer_subscribe_btn": "Subscribe",
+    "footer_products": "Core Products",
+    "footer_quote_support": "Quotation Support",
+    "footer_quote_support_desc": "Share target market, specifications and monthly volume to receive a practical quotation plan.",
+    "footer_brand_desc": "Tissue sourcing, OEM packaging and export coordination for global buyers.",
+    "footer_address": "B-1306, Fortune Plaza, Zhengyang Road, Zhoucun Dist, Zibo, Shandong, China"
   }
 }

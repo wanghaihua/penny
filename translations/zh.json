@@ -77,8 +77,8 @@
   "services": {
     "services_subtitle": "供应能力",
     "services_title": "针对不同渠道提供灵活规格与包装方案",
-    "page_services_title": "我们的服务",
-    "page_services_heading": "我们做什么",
+    "page_services_title": "服务支持",
+    "page_services_heading": "OEM、包装与出口协同",
     "service1_title": "卫生纸",
     "service1_desc": "支持原生浆、再生浆、竹浆，层数/张数/压花可按零售与商用场景定制。",
     "service2_title": "厨房纸",
@@ -90,7 +90,22 @@
     "service5_title": "定制包装",
     "service5_desc": "支持条码、语种、外箱唛头与托盘标准适配，满足目标市场合规需求。",
     "service6_title": "出口协同",
-    "service6_desc": "从报价到装柜照片、出运单证全流程透明沟通，关键节点可追踪。"
+    "service6_desc": "从报价到装柜照片、出运单证全流程透明沟通，关键节点可追踪。",
+    "services_support_subtitle": "订单支持",
+    "services_support_title": "从选品到出运的务实服务",
+    "services_support_desc": "我们围绕产品匹配、规格确认、包装审核与出口执行提供支持，让每一票订单推进更稳、沟通更少偏差。",
+    "services_process_subtitle": "执行流程",
+    "services_process_title": "我们如何支持每一票订单",
+    "services_commitments_subtitle": "采购关注点",
+    "services_commitments_title": "我们帮助买家降低风险的重点环节",
+    "services_commitment1_title": "规格匹配",
+    "services_commitment1_desc": "在报价前确认层数、尺寸、压花和包装数量，让打样与量产保持一致。",
+    "services_commitment2_title": "包材与版面审核",
+    "services_commitment2_desc": "量产前审核条码位置、语种信息、外箱唛头和托盘标准，减少返工与合规风险。",
+    "services_commitment3_title": "出货前质量控制",
+    "services_commitment3_desc": "围绕吸水性、克重、数量、封口质量和装柜情况进行检查后再安排出货。",
+    "services_commitment4_title": "单证协同",
+    "services_commitment4_desc": "协调整理装箱单、商业发票、订舱更新和装柜照片，便于进口计划顺利推进。"
   },
   "project": {
     "project_page_badge": "B2B 纸品产品组合",
@@ -198,6 +213,11 @@
     "footer_subscribe": "订阅我们",
     "footer_subscribe_desc": "订阅以获取最新新闻文章和资源",
     "footer_subscribe_placeholder": "立即订阅...",
-    "footer_subscribe_btn": "订阅"
+    "footer_subscribe_btn": "订阅",
+    "footer_products": "核心产品",
+    "footer_quote_support": "报价支持",
+    "footer_quote_support_desc": "告诉我们目标市场、产品规格和月度需求，我们会给出更贴近实际的报价方案。",
+    "footer_brand_desc": "面向全球买家的纸品选品、OEM 包装与出口协同服务。",
+    "footer_address": "中国山东省淄博市周村区正阳路财富广场 B-1306"
   }
 }
