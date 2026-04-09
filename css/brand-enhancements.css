@@ -1,94 +1,19 @@
 /*=================================================================
   Brand Texture Enhancements
 ==================================================================*/
-.brand-logo {
-  display: inline-flex !important;
-  align-items: center;
-  gap: 12px;
-  letter-spacing: 0;
-}
-
-.brand-logo__mark {
-  position: relative;
-  width: 36px;
-  height: 36px;
-  flex: 0 0 36px;
-  border-radius: 14px;
-  border: 1px solid rgba(84, 116, 95, 0.18);
-  background: #eef4ef;
-  box-shadow: 0 10px 20px rgba(35, 60, 48, 0.08);
-  transition: transform 0.32s ease, box-shadow 0.32s ease, border-color 0.32s ease;
-}
-
-.brand-logo__mark::before,
-.brand-logo__mark::after {
-  content: "";
-  position: absolute;
-  bottom: 7px;
-  width: 11px;
-  height: 18px;
-  background: #5c7b68;
-  border-radius: 100% 0 100% 0;
-}
-
-.brand-logo__mark::before {
-  left: 8px;
-  transform: rotate(-34deg);
-}
-
-.brand-logo__mark::after {
-  right: 8px;
-  transform: scaleX(-1) rotate(-34deg);
-}
-
-.brand-logo__word {
-  display: inline-flex;
-  align-items: baseline;
-  letter-spacing: 1.4px;
-}
-
-.brand-logo:hover .brand-logo__mark,
-.brand-logo:focus .brand-logo__mark {
-  transform: translateY(-2px) rotate(-4deg);
-  border-color: rgba(84, 116, 95, 0.28);
-  box-shadow: 0 14px 24px rgba(35, 60, 48, 0.12);
-}
-
-.brand-logo--footer {
-  color: var(--color-text-inverse) !important;
-}
-
-.brand-logo--footer .brand-logo__mark {
-  border-color: rgba(255, 255, 255, 0.16);
-  background: rgba(255, 255, 255, 0.08);
-  box-shadow: none;
-}
-
-.brand-logo--footer .brand-logo__mark::before,
-.brand-logo--footer .brand-logo__mark::after {
-  background: #d7e7d9;
-}
-
-.brand-signoff {
-  display: inline-flex;
-  align-items: center;
-  margin-top: 12px;
-  padding: 6px 12px;
-  border: 1px solid rgba(255, 255, 255, 0.14);
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.08);
-  color: rgba(255, 255, 255, 0.84);
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-}
-
 .hero-actions {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   gap: 14px;
+}
+
+.slider .block {
+  max-width: 920px;
+}
+
+.slider h1 {
+  max-width: 900px;
 }
 
 .hero-actions .btn {
@@ -379,26 +304,7 @@
   transform: none;
 }
 
-.brand-logo__mark {
-  animation: brandFloat 6s ease-in-out infinite;
-}
-
-@keyframes brandFloat {
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-
-  50% {
-    transform: translateY(-3px);
-  }
-}
-
 @media (prefers-reduced-motion: reduce) {
-  .brand-logo__mark {
-    animation: none;
-  }
-
   .js-motion-ready .reveal-on-scroll {
     opacity: 1;
     transform: none;
@@ -421,10 +327,9 @@
 }
 
 @media (max-width: 991px) {
-  .brand-logo__mark {
-    width: 34px;
-    height: 34px;
-    flex-basis: 34px;
+  .slider .block,
+  .slider h1 {
+    max-width: none;
   }
 
   .hero-eco-tags {
@@ -438,10 +343,6 @@
 }
 
 @media (max-width: 767px) {
-  .brand-logo {
-    gap: 10px;
-  }
-
   .hero-tag,
   .brand-chip {
     min-height: 34px;
@@ -459,33 +360,6 @@
 }
 
 @media (max-width: 576px) {
-  .brand-logo__mark {
-    width: 30px;
-    height: 30px;
-    flex-basis: 30px;
-    border-radius: 12px;
-  }
-
-  .brand-logo__mark::before,
-  .brand-logo__mark::after {
-    width: 9px;
-    height: 14px;
-    bottom: 7px;
-  }
-
-  .brand-logo__mark::before {
-    left: 7px;
-  }
-
-  .brand-logo__mark::after {
-    right: 7px;
-  }
-
-  .brand-signoff {
-    font-size: 10px;
-    letter-spacing: 0.08em;
-  }
-
   .hero-eco-tags,
   .about-story-tags {
     gap: 8px;

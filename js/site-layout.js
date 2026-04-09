@@ -71,9 +71,8 @@
             <div class="row">
                 <div class="col-lg-12">
                     <nav class="navbar navbar-expand-lg px-0 py-4">
-                        <a class="navbar-brand brand-logo" href="index.html" aria-label="Yame home">
-                            <span class="brand-logo__mark" aria-hidden="true"></span>
-                            <span class="brand-logo__word">Ya<span>me.</span></span>
+                        <a class="navbar-brand" href="index.html">
+                            Ya<span>me.</span>
                         </a>
                         <button class="navbar-toggler collapsed" type="button" data-toggle="collapse"
                             data-target="#navbarsExample09" aria-controls="navbarsExample09" aria-expanded="false"
@@ -135,12 +134,8 @@
             </div>
             <div class="col-lg-3 col-sm-6">
                 <div class="widget">
-                    <div class="logo logo--brand mb-4">
-                        <h3 class="brand-logo brand-logo--footer mb-0">
-                            <span class="brand-logo__mark" aria-hidden="true"></span>
-                            <span class="brand-logo__word">Ya<span>me.</span></span>
-                        </h3>
-                        <span class="brand-signoff" data-i18n="brand_tagline">Sustainable Tissue Supply</span>
+                    <div class="logo mb-4">
+                        <h3>Ya<span>me.</span></h3>
                     </div>
                     <p class="footer-brand-copy" data-i18n="footer_brand_desc">Tissue sourcing, OEM packaging and export coordination for global buyers.</p>
                     <ul class="list-unstyled footer-contact-list">

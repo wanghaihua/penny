@@ -13,7 +13,6 @@
         '.about-item',
         '.about-visual',
         '.about-info-item',
-        '.testimonial-card',
         '.testimonial-panel',
         '.portflio-item',
         '.spec-table-wrap',

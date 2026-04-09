@@ -20,7 +20,10 @@ window.__EMBEDDED_TRANSLATIONS__ = {
       "hero_subtitle": "Trusted tissue manufacturing & export partner",
       "hero_title": "Toilet Tissue, Kitchen Towels, Napkins & Facial Tissue for Global Buyers",
       "hero_btn": "Get a Quote",
-      "hero_btn_secondary": "View Products"
+      "hero_btn_secondary": "View Products",
+      "hero_tag_material": "Bamboo & Recycled Options",
+      "hero_tag_oem": "OEM & Private Label",
+      "hero_tag_export": "Export Document Support"
     },
     "home_extras": {
       "trust_item1_desc": "Years Export Experience",
@@ -58,6 +61,9 @@ window.__EMBEDDED_TRANSLATIONS__ = {
       "about_page_title": "Yame is a Professional Supplier for Household Products",
       "about_page_desc": "The Main Products are Parent Roll and Finished Products such as Toilet Paper, Kitchen Paper, Napkin Paper, Paper Towel, Facial Tissue Paper, Pocket Tissue Paper etc.",
       "about_page_content": "For over 18 years, We are mainly working with china and vietnam mills. We supply all major grades for the away from home and at home markets, including bath, towel, napkin, facial, and specialty grades as Bamboo, Recycled etc that allows us to offer our clients a wide selection of optimal tissue roll solutions.",
+      "about_tag_network": "China & Vietnam Mill Network",
+      "about_tag_channels": "Retail & AFH Supply",
+      "about_tag_delivery": "Stable Repeat-Order Delivery",
       "mission_title": "Our Mission",
       "mission_desc": "Providing sustainable, high-quality paper solutions that meet the evolving needs of businesses worldwide.",
       "vision_title": "Vision",
@@ -243,7 +249,10 @@ window.__EMBEDDED_TRANSLATIONS__ = {
       "hero_subtitle": "值得信赖的纸品制造与出口合作伙伴",
       "hero_title": "面向全球采购商的卫生纸、厨房纸、餐巾纸与面巾纸解决方案",
       "hero_btn": "获取报价",
-      "hero_btn_secondary": "查看产品"
+      "hero_btn_secondary": "查看产品",
+      "hero_tag_material": "竹浆与再生纸方案",
+      "hero_tag_oem": "OEM 与自有品牌支持",
+      "hero_tag_export": "出口单证协同"
     },
     "home_extras": {
       "trust_item1_desc": "外贸出口经验（年）",
@@ -281,6 +290,9 @@ window.__EMBEDDED_TRANSLATIONS__ = {
       "about_page_title": "Yame 是专业的家居用品供应商",
       "about_page_desc": "主要产品包括原纸卷和成品，如卫生纸、厨房纸、餐巾纸、纸巾、面巾纸、袖珍纸巾等。",
       "about_page_content": "超过18年来,我们主要与中国和越南的工厂合作。我们为家用和商用市场提供所有主要等级的产品,包括浴室用纸、毛巾、餐巾、面巾以及竹浆、再生纸等特殊等级,使我们能够为客户提供广泛的最佳纸卷解决方案。",
+      "about_tag_network": "中国与越南纸厂网络",
+      "about_tag_channels": "零售与商用渠道供货",
+      "about_tag_delivery": "稳定复购交付能力",
       "mission_title": "我们的使命",
       "mission_desc": "提供可持续的高质量纸张解决方案,满足全球企业不断发展的需求。",
       "vision_title": "愿景",
@@ -466,7 +478,10 @@ window.__EMBEDDED_TRANSLATIONS__ = {
       "hero_subtitle": "Socio confiable en fabricación y exportación de tissue",
       "hero_title": "Papel Higiénico, Toallas de Cocina, Servilletas y Pañuelos Faciales para Compradores Globales",
       "hero_btn": "Solicitar Cotización",
-      "hero_btn_secondary": "Ver Productos"
+      "hero_btn_secondary": "Ver Productos",
+      "hero_tag_material": "Opciones de bambu y reciclado",
+      "hero_tag_oem": "OEM y marca privada",
+      "hero_tag_export": "Soporte documental de exportacion"
     },
     "home_extras": {
       "trust_item1_desc": "Años de experiencia exportadora",
@@ -504,6 +519,9 @@ window.__EMBEDDED_TRANSLATIONS__ = {
       "about_page_title": "Yame es un Proveedor Profesional de Productos para el Hogar",
       "about_page_desc": "Los productos principales son rollos de papel y productos terminados como papel higiénico, toallas de cocina, servilletas, toallas de papel, pañuelos faciales, pañuelos de bolsillo, etc.",
       "about_page_content": "Durante más de 18 años, hemos trabajado principalmente con fábricas de China y Vietnam. Suministramos todos los grados principales para los mercados domésticos y comerciales, incluidos baño, toalla, servilleta, facial y grados especiales como Bambú, Reciclado, etc., lo que nos permite ofrecer a nuestros clientes una amplia selección de soluciones óptimas de rollos de papel.",
+      "about_tag_network": "Red de molinos en China y Vietnam",
+      "about_tag_channels": "Suministro para retail y AFH",
+      "about_tag_delivery": "Entregas estables para pedidos recurrentes",
       "mission_title": "Nuestra Misión",
       "mission_desc": "Proporcionar soluciones de papel sostenibles y de alta calidad que satisfagan las necesidades cambiantes de las empresas en todo el mundo.",
       "vision_title": "Visión",
