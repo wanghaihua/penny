@@ -19,7 +19,10 @@
     "hero_subtitle": "值得信赖的纸品制造与出口合作伙伴",
     "hero_title": "面向全球采购商的卫生纸、厨房纸、餐巾纸与面巾纸解决方案",
     "hero_btn": "获取报价",
-    "hero_btn_secondary": "查看产品"
+    "hero_btn_secondary": "查看产品",
+    "hero_tag_material": "竹浆与再生纸方案",
+    "hero_tag_oem": "OEM 与自有品牌支持",
+    "hero_tag_export": "出口单证协同"
   },
   "home_extras": {
     "trust_item1_desc": "外贸出口经验（年）",
@@ -57,6 +60,9 @@
     "about_page_title": "Yame 是专业的家居用品供应商",
     "about_page_desc": "主要产品包括原纸卷和成品，如卫生纸、厨房纸、餐巾纸、纸巾、面巾纸、袖珍纸巾等。",
     "about_page_content": "超过18年来,我们主要与中国和越南的工厂合作。我们为家用和商用市场提供所有主要等级的产品,包括浴室用纸、毛巾、餐巾、面巾以及竹浆、再生纸等特殊等级,使我们能够为客户提供广泛的最佳纸卷解决方案。",
+    "about_tag_network": "中国与越南纸厂网络",
+    "about_tag_channels": "零售与商用渠道供货",
+    "about_tag_delivery": "稳定复购交付能力",
     "mission_title": "我们的使命",
     "mission_desc": "提供可持续的高质量纸张解决方案,满足全球企业不断发展的需求。",
     "vision_title": "愿景",
@@ -217,6 +223,7 @@
     "footer_products": "核心产品",
     "footer_quote_support": "报价支持",
     "footer_quote_support_desc": "告诉我们目标市场、产品规格和月度需求，我们会给出更贴近实际的报价方案。",
+    "brand_tagline": "可持续纸品供应",
     "footer_brand_desc": "面向全球买家的纸品选品、OEM 包装与出口协同服务。",
     "footer_address": "中国山东省淄博市周村区正阳路财富广场 B-1306"
   }

@@ -1,11 +1,6 @@
 // Translation system with embedded fallback for file:// browsing
 let translations = {};
 const SUPPORTED_LANGS = ['en', 'zh', 'es'];
-const LANG_LABELS = {
-    en: { short: 'EN', name: 'English' },
-    zh: { short: '中文', name: '简体中文' },
-    es: { short: 'ES', name: 'Español' }
-};
 
 function flattenTranslationSections(data) {
     const flat = {};
@@ -71,22 +66,8 @@ function resolveInitialLanguage() {
 }
 
 function setupLanguageMenu() {
-    const langItems = document.querySelectorAll('.header-top-lang .dropdown-item');
+    const langItems = document.querySelectorAll('.header-top-lang .lang-option');
     langItems.forEach(item => {
-        const inlineOnclick = item.getAttribute('onclick');
-        if (inlineOnclick) {
-            item.removeAttribute('onclick');
-        }
-
-        let langCode = item.getAttribute('data-lang');
-        if (!langCode && inlineOnclick) {
-            const match = inlineOnclick.match(/switchLang\('([a-z]+)'\)/);
-            if (match) {
-                langCode = match[1];
-                item.setAttribute('data-lang', langCode);
-            }
-        }
-
         item.addEventListener('click', function (e) {
             e.preventDefault();
             const targetLang = this.getAttribute('data-lang');
@@ -94,25 +75,12 @@ function setupLanguageMenu() {
                 return;
             }
             switchLang(targetLang);
-
-            const wrapper = this.closest('.header-top-lang');
-            if (!wrapper) {
-                return;
-            }
-            const dropdown = wrapper.querySelector('.dropdown-menu');
-            const toggle = wrapper.querySelector('.dropdown-toggle');
-            if (dropdown) {
-                dropdown.classList.remove('show');
-            }
-            if (toggle) {
-                toggle.setAttribute('aria-expanded', 'false');
-            }
         });
     });
 }
 
 function setActiveLanguageItem(lang) {
-    document.querySelectorAll('.header-top-lang .dropdown-item').forEach(item => {
+    document.querySelectorAll('.header-top-lang .lang-option').forEach(item => {
         const isActive = item.getAttribute('data-lang') === lang;
         item.classList.toggle('active', isActive);
         item.setAttribute('aria-pressed', String(isActive));
@@ -128,21 +96,18 @@ function applyTranslations(lang) {
     }
 
     // Translate Menu Items & Header
+    const navLabelByHref = {
+        'index.html': t.home,
+        'about.html': t.about,
+        'service.html': t.services,
+        'project.html': t.portfolio,
+        'contact.html': t.contact
+    };
     const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
     navLinks.forEach(link => {
         const href = link.getAttribute('href');
-        if (href === 'index.html') {
-            link.innerText = t.home;
-        } else if (href === 'about.html' && !link.classList.contains('dropdown-toggle')) {
-            link.innerText = t.about;
-        } else if (link.id === 'dropdown03') {
-            link.innerHTML = t.about + ' <i class="fas fa-chevron-down small"></i>';
-        } else if (href === 'service.html') {
-            link.innerText = t.services;
-        } else if (href === 'project.html') {
-            link.innerText = t.portfolio;
-        } else if (href === 'contact.html') {
-            link.innerText = t.contact;
+        if (navLabelByHref[href]) {
+            link.innerText = navLabelByHref[href];
         }
     });
 
@@ -152,10 +117,14 @@ function applyTranslations(lang) {
     }
 
     const callUs = document.querySelector('.header-top-info a[href^="tel"]');
-    if (callUs && t.call_us) {
+    if (callUs) {
         const numberNode = callUs.querySelector('span');
-        const number = numberNode ? numberNode.innerText : '';
-        callUs.innerHTML = t.call_us + ' : <span>' + number + '</span>';
+        const number = numberNode ? numberNode.innerText.trim() : '+86 18678139489';
+        const callUsLabel = t.call_us ? `${t.call_us}: ${number}` : number;
+
+        callUs.setAttribute('aria-label', callUsLabel);
+        callUs.setAttribute('title', callUsLabel);
+        callUs.innerHTML = '<i class="fas fa-phone-alt" aria-hidden="true"></i><span>' + number + '</span>';
     }
 
     // Translate content by data-i18n
@@ -184,19 +153,6 @@ function switchLang(lang) {
     const normalizedLang = translations[lang] ? lang : 'en';
     localStorage.setItem('site-lang', normalizedLang);
     document.documentElement.lang = normalizedLang;
-
-    const currentLang = LANG_LABELS[normalizedLang] || {
-        short: normalizedLang.toUpperCase(),
-        name: normalizedLang.toUpperCase()
-    };
-    const langLabel = document.getElementById('current-lang');
-    const langName = document.getElementById('current-lang-name');
-    if (langLabel) {
-        langLabel.innerText = currentLang.short;
-    }
-    if (langName) {
-        langName.innerText = currentLang.name;
-    }
 
     setActiveLanguageItem(normalizedLang);
     applyTranslations(normalizedLang);
@@ -254,46 +210,4 @@ async function loadTranslations() {
 document.addEventListener('DOMContentLoaded', function () {
     setupLanguageMenu();
     loadTranslations();
-
-    const langToggle = document.querySelector('.header-top-lang .dropdown-toggle');
-    const langDropdown = document.querySelector('.header-top-lang .dropdown-menu');
-
-    if (langToggle && langDropdown) {
-        function closeLanguageMenu() {
-            langDropdown.classList.remove('show');
-            langToggle.setAttribute('aria-expanded', 'false');
-        }
-
-        langToggle.addEventListener('click', function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-            const isOpen = langDropdown.classList.contains('show');
-
-            document.querySelectorAll('.dropdown-menu.show').forEach(menu => {
-                if (menu !== langDropdown) {
-                    menu.classList.remove('show');
-                    const menuWrapper = menu.closest('.header-top-lang');
-                    const menuToggle = menuWrapper ? menuWrapper.querySelector('.dropdown-toggle') : null;
-                    if (menuToggle) {
-                        menuToggle.setAttribute('aria-expanded', 'false');
-                    }
-                }
-            });
-
-            langDropdown.classList.toggle('show', !isOpen);
-            langToggle.setAttribute('aria-expanded', String(!isOpen));
-        });
-
-        document.addEventListener('click', function (e) {
-            if (!langToggle.contains(e.target) && !langDropdown.contains(e.target)) {
-                closeLanguageMenu();
-            }
-        });
-
-        document.addEventListener('keydown', function (e) {
-            if (e.key === 'Escape') {
-                closeLanguageMenu();
-            }
-        });
-    }
 });

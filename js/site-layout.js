@@ -32,40 +32,34 @@
 <header class="navigation">
     <div class="header-top">
         <div class="container">
-            <div class="row justify-content-between align-items-center">
-                <div class="col-lg-2 col-md-4">
-                    <div class="header-top-socials text-center text-lg-left text-md-left">
-                        <a href="https://www.instagram.com/liaozhiping1018" aria-label="instagram"><i class="fab fa-instagram"></i></a>
-                        <a href="https://www.youtube.com/@Pennyliao-z5h" aria-label="youtube"><i class="fab fa-youtube"></i></a>
-                        <a href="https://wa.me/85254452984" aria-label="whatsapp"><i class="fab fa-whatsapp"></i></a>
+            <div class="row justify-content-between align-items-center header-top-row">
+                <div class="col-lg-3 col-md-12">
+                    <div class="header-top-socials" aria-label="Social media links">
+                        <a href="https://www.instagram.com/liaozhiping1018" class="header-top-social-link" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                            <i class="fab fa-instagram" aria-hidden="true"></i>
+                        </a>
+                        <a href="https://www.youtube.com/@Pennyliao-z5h" class="header-top-social-link" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+                            <i class="fab fa-youtube" aria-hidden="true"></i>
+                        </a>
+                        <a href="https://wa.me/85254452984" class="header-top-social-link" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+                            <i class="fab fa-whatsapp" aria-hidden="true"></i>
+                        </a>
                     </div>
                 </div>
-                <div class="col-lg-10 col-md-8 text-center text-lg-right text-md-right">
-                    <div class="header-top-info mb-2 mb-md-0">
-                        <a href="tel:+8618678139489">Call Us : <span>+86 18678139489</span></a>
-                        <a href="mailto:penny.liao@yametissue.com"><i class="fas fa-envelope mr-2"></i><span>penny.liao@yametissue.com</span></a>
-                        <div class="dropdown d-inline-flex header-top-lang">
-                            <button type="button" class="dropdown-toggle" aria-haspopup="true" aria-expanded="false" aria-label="Language selector">
-                                <i class="ti-world" aria-hidden="true"></i>
-                                <span class="lang-current">
-                                    <span class="lang-current-code" id="current-lang">EN</span>
-                                    <span class="lang-current-name" id="current-lang-name">English</span>
-                                </span>
-                            </button>
-                            <div class="dropdown-menu dropdown-menu-right" role="menu">
-                                <a class="dropdown-item" href="#" data-lang="zh" role="menuitem">
-                                    <span class="lang-option-main">中文</span>
-                                    <span class="lang-option-meta">简体中文</span>
-                                </a>
-                                <a class="dropdown-item" href="#" data-lang="en" role="menuitem">
-                                    <span class="lang-option-main">EN</span>
-                                    <span class="lang-option-meta">English</span>
-                                </a>
-                                <a class="dropdown-item" href="#" data-lang="es" role="menuitem">
-                                    <span class="lang-option-main">ES</span>
-                                    <span class="lang-option-meta">Español</span>
-                                </a>
-                            </div>
+                <div class="col-lg-9 col-md-12">
+                    <div class="header-top-info">
+                        <a href="tel:+8618678139489" class="header-top-link header-top-link--phone" aria-label="Call Us: +86 18678139489" title="Call Us: +86 18678139489">
+                            <i class="fas fa-phone-alt" aria-hidden="true"></i>
+                            <span>+86 18678139489</span>
+                        </a>
+                        <a href="mailto:penny.liao@yametissue.com" class="header-top-link header-top-link--mail" aria-label="Email: penny.liao@yametissue.com">
+                            <i class="fas fa-envelope" aria-hidden="true"></i>
+                            <span>penny.liao@yametissue.com</span>
+                        </a>
+                        <div class="header-top-lang" role="group" aria-label="Language selector">
+                            <button type="button" class="lang-option" data-lang="zh" aria-label="简体中文">中</button>
+                            <button type="button" class="lang-option" data-lang="en" aria-label="English">EN</button>
+                            <button type="button" class="lang-option" data-lang="es" aria-label="Español">ES</button>
                         </div>
                     </div>
                 </div>
@@ -77,8 +71,9 @@
             <div class="row">
                 <div class="col-lg-12">
                     <nav class="navbar navbar-expand-lg px-0 py-4">
-                        <a class="navbar-brand" href="index.html">
-                            Ya<span>me.</span>
+                        <a class="navbar-brand brand-logo" href="index.html" aria-label="Yame home">
+                            <span class="brand-logo__mark" aria-hidden="true"></span>
+                            <span class="brand-logo__word">Ya<span>me.</span></span>
                         </a>
                         <button class="navbar-toggler collapsed" type="button" data-toggle="collapse"
                             data-target="#navbarsExample09" aria-controls="navbarsExample09" aria-expanded="false"
@@ -140,8 +135,12 @@
             </div>
             <div class="col-lg-3 col-sm-6">
                 <div class="widget">
-                    <div class="logo mb-4">
-                        <h3>Ya<span>me.</span></h3>
+                    <div class="logo logo--brand mb-4">
+                        <h3 class="brand-logo brand-logo--footer mb-0">
+                            <span class="brand-logo__mark" aria-hidden="true"></span>
+                            <span class="brand-logo__word">Ya<span>me.</span></span>
+                        </h3>
+                        <span class="brand-signoff" data-i18n="brand_tagline">Sustainable Tissue Supply</span>
                     </div>
                     <p class="footer-brand-copy" data-i18n="footer_brand_desc">Tissue sourcing, OEM packaging and export coordination for global buyers.</p>
                     <ul class="list-unstyled footer-contact-list">

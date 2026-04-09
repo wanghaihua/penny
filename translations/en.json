@@ -19,7 +19,10 @@
     "hero_subtitle": "Trusted tissue manufacturing & export partner",
     "hero_title": "Toilet Tissue, Kitchen Towels, Napkins & Facial Tissue for Global Buyers",
     "hero_btn": "Get a Quote",
-    "hero_btn_secondary": "View Products"
+    "hero_btn_secondary": "View Products",
+    "hero_tag_material": "Bamboo & Recycled Options",
+    "hero_tag_oem": "OEM & Private Label",
+    "hero_tag_export": "Export Document Support"
   },
   "home_extras": {
     "trust_item1_desc": "Years Export Experience",
@@ -57,6 +60,9 @@
     "about_page_title": "Yame is a Professional Supplier for Household Products",
     "about_page_desc": "The Main Products are Parent Roll and Finished Products such as Toilet Paper, Kitchen Paper, Napkin Paper, Paper Towel, Facial Tissue Paper, Pocket Tissue Paper etc.",
     "about_page_content": "For over 18 years, We are mainly working with china and vietnam mills. We supply all major grades for the away from home and at home markets, including bath, towel, napkin, facial, and specialty grades as Bamboo, Recycled etc that allows us to offer our clients a wide selection of optimal tissue roll solutions.",
+    "about_tag_network": "China & Vietnam Mill Network",
+    "about_tag_channels": "Retail & AFH Supply",
+    "about_tag_delivery": "Stable Repeat-Order Delivery",
     "mission_title": "Our Mission",
     "mission_desc": "Providing sustainable, high-quality paper solutions that meet the evolving needs of businesses worldwide.",
     "vision_title": "Vision",
@@ -217,6 +223,7 @@
     "footer_products": "Core Products",
     "footer_quote_support": "Quotation Support",
     "footer_quote_support_desc": "Share target market, specifications and monthly volume to receive a practical quotation plan.",
+    "brand_tagline": "Sustainable Tissue Supply",
     "footer_brand_desc": "Tissue sourcing, OEM packaging and export coordination for global buyers.",
     "footer_address": "B-1306, Fortune Plaza, Zhengyang Road, Zhoucun Dist, Zibo, Shandong, China"
   }

@@ -1,204 +1,85 @@
 /* Language Switcher */
 .header-top-lang {
-    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 1px;
+    min-height: 32px;
+    padding: 2px;
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.06);
     flex-shrink: 0;
 }
 
-.header-top-lang .dropdown-toggle {
-    display: inline-flex;
-    align-items: center;
-    gap: 12px;
-    min-height: 38px;
-    padding: 0 14px;
-    border: 1px solid rgba(255, 255, 255, 0.18);
-    border-radius: 999px;
-    background: rgba(255, 255, 255, 0.08);
-    color: var(--color-text-inverse) !important;
-    text-decoration: none !important;
-    font-weight: 600;
-    font-size: 12px;
-    letter-spacing: 0.2px;
-    transition: background 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
-    cursor: pointer;
-}
-
-.header-top-lang .dropdown-toggle:hover,
-.header-top-lang .dropdown-toggle:focus {
-    border-color: rgba(255, 255, 255, 0.28);
-    background: rgba(255, 255, 255, 0.14);
-    box-shadow: 0 10px 22px rgba(20, 43, 34, 0.18);
-    outline: none;
-}
-
-.header-top-lang .dropdown-toggle i {
-    font-size: 14px;
-    color: #f1debc;
-}
-
-.header-top-lang .lang-current {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-}
-
-.header-top-lang .lang-current-code {
+.header-top-lang .lang-option {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    min-width: 40px;
-    padding: 3px 8px;
+    min-width: 30px;
+    height: 24px;
+    padding: 0 7px;
+    border: 0;
     border-radius: 999px;
-    background: rgba(255, 255, 255, 0.14);
-    font-size: 11px;
+    background: transparent;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 9px;
     font-weight: 700;
-    color: #ffffff;
+    letter-spacing: 0.08em;
+    line-height: 1;
+    cursor: pointer;
+    transition: background 0.18s ease, color 0.18s ease, box-shadow 0.18s ease;
 }
 
-.header-top-lang .lang-current-name {
-    color: rgba(255, 255, 255, 0.92);
-    font-size: 12px;
-    font-weight: 600;
-}
-
-.header-top-lang .dropdown-toggle::after {
-    display: inline-block !important;
-    margin-left: 2px;
-    width: 0;
-    height: 0;
-    border-left: 4px solid transparent;
-    border-right: 4px solid transparent;
-    border-top: 5px solid rgba(255, 255, 255, 0.88);
-    transition: transform 0.2s ease;
-}
-
-.header-top-lang .dropdown-toggle[aria-expanded="true"]::after {
-    transform: rotate(180deg);
-}
-
-.header-top-lang .dropdown-menu {
-    display: none;
-    visibility: visible !important;
-    opacity: 1 !important;
-    float: none !important;
-    width: 210px !important;
-    min-width: 210px !important;
-    max-width: 210px !important;
-    margin: 10px 0 0;
-    padding: 8px;
-    left: auto !important;
-    right: 0 !important;
-    border: 1px solid rgba(65, 101, 81, 0.12);
-    border-radius: 16px;
-    background: #fffdf8;
-    box-shadow: 0 18px 34px rgba(24, 46, 37, 0.14);
-    overflow: hidden;
-    z-index: 1050;
-}
-
-.header-top-lang .dropdown-menu.show {
-    display: block !important;
-    animation: langMenuIn 0.16s ease;
-}
-
-.header-top-lang .dropdown-item {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 12px;
-    padding: 11px 12px;
-    border-radius: 10px;
-    margin: 2px 0;
-    color: var(--color-text-primary);
-    font-size: 13px;
-    font-weight: 600;
-    text-transform: none;
+.header-top-lang .lang-option[data-lang="zh"] {
+    min-width: 24px;
+    padding: 0 6px;
     letter-spacing: 0;
-    white-space: nowrap;
-    transition: background 0.18s ease, color 0.18s ease;
 }
 
-.header-top .header-top-info .header-top-lang .dropdown-item span {
-    color: inherit !important;
+.header-top-lang .lang-option:hover,
+.header-top-lang .lang-option:focus {
+    background: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    outline: none;
 }
 
-.header-top-lang .dropdown-item:hover {
-    background: #eef2e9;
+.header-top-lang .lang-option.active {
+    background: rgba(255, 253, 248, 0.96);
     color: var(--color-primary-dark);
+    box-shadow: 0 4px 10px rgba(20, 43, 34, 0.1);
 }
 
-.header-top-lang .dropdown-item.active {
-    background: #edf3ee;
+.header-top-lang .lang-option.active:hover,
+.header-top-lang .lang-option.active:focus {
+    background: rgba(255, 253, 248, 0.96);
     color: var(--color-primary-dark);
-    font-weight: 700;
-}
-
-.header-top-lang .dropdown-item.active::after {
-    content: "";
-    position: absolute;
-    right: 12px;
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    background: var(--color-accent);
-}
-
-.header-top-lang .lang-option-main {
-    font-size: 13px;
-}
-
-.header-top-lang .lang-option-meta {
-    padding-right: 16px;
-    color: var(--color-text-secondary);
-    font-size: 12px;
-    font-weight: 500;
-}
-
-@keyframes langMenuIn {
-    from {
-        opacity: 0;
-        transform: translateY(-5px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
 }
 
 @media (max-width: 768px) {
-    .header-top-lang .dropdown-toggle {
-        min-height: 36px;
-        padding: 0 12px;
-    }
-
-    .header-top-lang .dropdown-menu {
-        right: 0 !important;
-        left: auto !important;
+    .header-top-lang {
+        min-height: 30px;
     }
 }
 
 @media (max-width: 576px) {
     .header-top-lang {
-        width: 100%;
         display: flex;
         justify-content: center;
+        width: auto;
+        max-width: 100%;
+        margin: 0;
     }
 
-    .header-top-lang .dropdown-toggle {
-        width: 100%;
-        max-width: 224px;
-        justify-content: center;
+    .header-top-lang .lang-option {
+        min-width: 28px;
+        height: 22px;
+        padding: 0 6px;
+        font-size: 9px;
     }
 
-    .header-top-lang .lang-current-name {
-        display: none;
-    }
-
-    .header-top-lang .dropdown-menu {
-        width: 100% !important;
-        min-width: 224px !important;
-        max-width: 224px !important;
+    .header-top-lang .lang-option[data-lang="zh"] {
+        min-width: 22px;
+        padding: 0 5px;
     }
 }
 

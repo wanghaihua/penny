@@ -11,13 +11,14 @@
 	// testimonial-wrap
 	if ($('.testimonial-wrap').length !== 0) {
 		$('.testimonial-wrap').slick({
-			slidesToShow: 2,
-			slidesToScroll: 2,
+			slidesToShow: 1,
+			slidesToScroll: 1,
 			infinite: true,
 			dots: true,
 			arrows: false,
 			autoplay: true,
-			autoplaySpeed: 6000,
+			autoplaySpeed: 5200,
+			adaptiveHeight: true,
 			responsive: [{
 					breakpoint: 1024,
 					settings: {
