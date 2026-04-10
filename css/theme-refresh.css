@@ -139,9 +139,22 @@ a:hover {
 }
 
 #navbar {
-  background: #fcfbf7;
-  border-bottom: 1px solid rgba(67, 104, 83, 0.12);
-  box-shadow: 0 12px 28px rgba(42, 74, 59, 0.08);
+  position: relative;
+  background: #f1f5ee;
+  border-bottom: 1px solid rgba(67, 104, 83, 0.14);
+  box-shadow: 0 10px 24px rgba(42, 74, 59, 0.07);
+}
+
+#navbar::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.72);
+}
+
+#navbar .navbar {
+  min-height: 78px;
 }
 
 .header-top .header-top-socials,
@@ -243,17 +256,26 @@ a:hover {
 
 .navbar-brand {
   color: var(--color-primary-dark) !important;
-  font-size: 1.9rem;
-  letter-spacing: 1.8px;
+  font-size: 1.76rem;
+  letter-spacing: 1.4px;
 }
 
 .navbar-brand span {
   color: #6e8f7a;
 }
 
+.navbar-toggler {
+  color: var(--color-primary-dark) !important;
+}
+
+.navbar-toggler:hover,
+.navbar-toggler:focus {
+  color: #4f705d !important;
+}
+
 #navbar .nav-link {
   position: relative;
-  padding: 0.85rem 0;
+  padding: 0.72rem 0;
   margin: 0 0.22rem;
   color: var(--color-text-primary) !important;
   font-size: 13px;
@@ -265,12 +287,16 @@ a:hover {
   content: "";
   position: absolute;
   left: 0;
-  bottom: 0.28rem;
+  bottom: 0.18rem;
   width: 0;
   height: 2px;
   border-radius: 999px;
   background: #6e8f7a;
   transition: width 0.24s ease;
+}
+
+#navbar .btn-solid-border {
+  padding: 0.86rem 1.7rem 0.8rem;
 }
 
 #navbar .nav-link:hover::after,
@@ -357,6 +383,10 @@ a:hover {
   padding: 0 0 18px;
   margin-top: -48px;
   border-bottom: 0;
+}
+
+.trust-strip .row {
+  row-gap: 0;
 }
 
 .trust-item,
@@ -973,6 +1003,10 @@ section.about .about-item--split {
     padding: 188px 0 156px;
   }
 
+  #navbar .navbar {
+    min-height: 72px;
+  }
+
   .slider h1 {
     font-size: 2.9rem;
   }
@@ -1016,6 +1050,10 @@ section.about .about-item--split {
 }
 
 @media (max-width: 767px) {
+  .trust-strip .row {
+    row-gap: 24px;
+  }
+
   .header-top .header-top-info {
     gap: 8px 10px;
   }
@@ -1042,6 +1080,10 @@ section.about .about-item--split {
 }
 
 @media (max-width: 576px) {
+  .trust-strip .row {
+    row-gap: 24px;
+  }
+
   .header-top .header-top-info {
     gap: 8px;
   }
@@ -1055,6 +1097,10 @@ section.about .about-item--split {
 
   .header-top .header-top-link--mail span {
     text-align: center;
+  }
+
+  #navbar .navbar {
+    min-height: 68px;
   }
 
   .section-title .h6,

@@ -1,6 +1,7 @@
 // Translation system with embedded fallback for file:// browsing
 let translations = {};
 const SUPPORTED_LANGS = ['en', 'zh', 'es'];
+let languageMenuBound = false;
 
 function flattenTranslationSections(data) {
     const flat = {};
@@ -66,17 +67,26 @@ function resolveInitialLanguage() {
 }
 
 function setupLanguageMenu() {
-    const langItems = document.querySelectorAll('.header-top-lang .lang-option');
-    langItems.forEach(item => {
-        item.addEventListener('click', function (e) {
-            e.preventDefault();
-            const targetLang = this.getAttribute('data-lang');
-            if (!targetLang) {
-                return;
-            }
-            switchLang(targetLang);
-        });
+    if (languageMenuBound) {
+        return;
+    }
+
+    document.addEventListener('click', function (e) {
+        const langButton = e.target.closest('.header-top-lang .lang-option');
+        if (!langButton) {
+            return;
+        }
+
+        e.preventDefault();
+        const targetLang = langButton.getAttribute('data-lang');
+        if (!targetLang) {
+            return;
+        }
+
+        switchLang(targetLang);
     });
+
+    languageMenuBound = true;
 }
 
 function setActiveLanguageItem(lang) {
@@ -169,20 +179,23 @@ function loadFromEmbeddedTranslations() {
 }
 
 async function loadTranslations() {
-    // If user opens file directly, fetch may fail due browser security policy.
-    if (window.location.protocol === 'file:') {
-        const loaded = loadFromEmbeddedTranslations();
-        if (!loaded) {
-            console.error('Embedded translations are missing.');
-            return;
-        }
+    const embeddedLoaded = loadFromEmbeddedTranslations();
+
+    if (embeddedLoaded) {
         switchLang(resolveInitialLanguage());
+    }
+
+    // If user opens file directly, embedded translations are the primary source.
+    if (window.location.protocol === 'file:') {
+        if (!embeddedLoaded) {
+            console.error('Embedded translations are missing.');
+        }
         return;
     }
 
     try {
         const responses = await Promise.all(
-            SUPPORTED_LANGS.map(lang => fetch(`translations/${lang}.json`, { cache: 'no-store' }))
+            SUPPORTED_LANGS.map(lang => fetch(`translations/${lang}.json`))
         );
 
         for (let index = 0; index < SUPPORTED_LANGS.length; index += 1) {
@@ -197,17 +210,21 @@ async function loadTranslations() {
 
         switchLang(resolveInitialLanguage());
     } catch (error) {
-        console.warn('Failed to fetch translation JSON, fallback to embedded data.', error);
-        const loaded = loadFromEmbeddedTranslations();
-        if (!loaded) {
+        if (!embeddedLoaded) {
             console.error('Both remote and embedded translations failed.');
             return;
         }
-        switchLang(resolveInitialLanguage());
+        console.warn('Failed to refresh translation JSON, keep using embedded data.', error);
     }
 }
 
-document.addEventListener('DOMContentLoaded', function () {
+function initializeLanguageSystem() {
     setupLanguageMenu();
     loadTranslations();
-});
+}
+
+if (document.body) {
+    initializeLanguageSystem();
+} else {
+    document.addEventListener('DOMContentLoaded', initializeLanguageSystem, { once: true });
+}

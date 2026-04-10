@@ -29,6 +29,8 @@
   <link rel="stylesheet" href="css/theme-refresh.css">
   <link rel="stylesheet" href="css/brand-enhancements.css">
   <link rel="stylesheet" href="css/lang-switcher.css">
+  <script src="js/embedded-translations.js"></script>
+  <script src="js/site-layout.js"></script>
 
   <!--Favicon-->
   <link rel="icon" href="images/favicon.png" type="image/x-icon">
@@ -38,6 +40,7 @@
 <body data-page="services">
 
   <div data-site-header></div>
+  <script>window.SiteLayout.renderHeaderMount();</script>
 
   <section class="page-title bg-1">
     <div class="container">
@@ -209,6 +212,7 @@
   </section>
 
   <div data-site-footer></div>
+  <script>window.SiteLayout.renderFooterMount();</script>
 
   <!-- 
 Essential Scripts
@@ -229,8 +233,6 @@ Essential Scripts
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCcABaamniA6OL5YvYSpB3pFMNrXwXnLwU" defer></script>
   <script src="plugins/google-map/map.js" defer></script>
 
-  <script src="js/site-layout.js"></script>
-  <script src="js/embedded-translations.js"></script>
   <script src="js/lang-switch.js"></script>
   <script src="js/script.js"></script>
   <script src="js/brand-motion.js"></script>
