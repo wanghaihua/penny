@@ -6,6 +6,7 @@
 
     const REVEAL_SELECTORS = [
         '.section-title',
+        '.hero-catalog-card',
         '.trust-item',
         '.intro-item',
         '.service-item',
@@ -19,7 +20,7 @@
         '.spec-inquiry-box',
         '.contact__form',
         '.contact-content',
-        '.google-map #map',
+        '.contact-map-card',
         '.cta-item',
         '.cta-block-2',
         '.footer .widget'

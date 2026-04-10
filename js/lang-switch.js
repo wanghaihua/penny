@@ -134,7 +134,7 @@ function applyTranslations(lang) {
 
         callUs.setAttribute('aria-label', callUsLabel);
         callUs.setAttribute('title', callUsLabel);
-        callUs.innerHTML = '<i class="fas fa-phone-alt" aria-hidden="true"></i><span>' + number + '</span>';
+        callUs.innerHTML = '<i class="ti-mobile" aria-hidden="true"></i><span>' + number + '</span>';
     }
 
     // Translate content by data-i18n

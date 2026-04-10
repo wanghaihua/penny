@@ -129,24 +129,24 @@
                 <div class="col-lg-3 col-md-12">
                     <div class="header-top-socials" aria-label="Social media links">
                         <a href="https://www.instagram.com/liaozhiping1018" class="header-top-social-link" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-                            <i class="fab fa-instagram" aria-hidden="true"></i>
+                            <i class="ti-instagram" aria-hidden="true"></i>
                         </a>
                         <a href="https://www.youtube.com/@Pennyliao-z5h" class="header-top-social-link" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
-                            <i class="fab fa-youtube" aria-hidden="true"></i>
+                            <i class="ti-youtube" aria-hidden="true"></i>
                         </a>
                         <a href="https://wa.me/85254452984" class="header-top-social-link" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
-                            <i class="fab fa-whatsapp" aria-hidden="true"></i>
+                            <i class="ti-comment-alt" aria-hidden="true"></i>
                         </a>
                     </div>
                 </div>
                 <div class="col-lg-9 col-md-12">
                     <div class="header-top-info">
                         <a href="tel:+8618678139489" class="header-top-link header-top-link--phone" aria-label="${callUsText}: +86 18678139489" title="${callUsText}: +86 18678139489">
-                            <i class="fas fa-phone-alt" aria-hidden="true"></i>
+                            <i class="ti-mobile" aria-hidden="true"></i>
                             <span>+86 18678139489</span>
                         </a>
                         <a href="mailto:penny.liao@yametissue.com" class="header-top-link header-top-link--mail" aria-label="Email: penny.liao@yametissue.com">
-                            <i class="fas fa-envelope" aria-hidden="true"></i>
+                            <i class="ti-email" aria-hidden="true"></i>
                             <span>penny.liao@yametissue.com</span>
                         </a>
                         <div class="header-top-lang" role="group" aria-label="Language selector">
@@ -170,7 +170,7 @@
                         <button class="navbar-toggler collapsed" type="button" data-toggle="collapse"
                             data-target="#navbarsExample09" aria-controls="navbarsExample09" aria-expanded="false"
                             aria-label="Toggle navigation">
-                            <span class="fa fa-bars"></span>
+                            <span class="ti-menu" aria-hidden="true"></span>
                         </button>
                         <div class="collapse navbar-collapse text-center" id="navbarsExample09">
                             <ul class="navbar-nav ml-auto">
@@ -250,9 +250,9 @@
                 </div>
                 <div class="col-lg-6 text-left text-lg-right">
                     <ul class="list-inline footer-socials">
-                        <li class="list-inline-item"><a href="https://wa.me/85254452984"><i class="fab fa-whatsapp mr-2"></i>WhatsApp</a></li>
-                        <li class="list-inline-item"><a href="https://www.youtube.com/@Pennyliao-z5h"><i class="fab fa-youtube mr-2"></i>YouTube</a></li>
-                        <li class="list-inline-item"><a href="https://www.instagram.com/liaozhiping1018"><i class="fab fa-instagram mr-2"></i>Instagram</a></li>
+                        <li class="list-inline-item"><a href="https://wa.me/85254452984"><i class="ti-comment-alt mr-2" aria-hidden="true"></i>WhatsApp</a></li>
+                        <li class="list-inline-item"><a href="https://www.youtube.com/@Pennyliao-z5h"><i class="ti-youtube mr-2" aria-hidden="true"></i>YouTube</a></li>
+                        <li class="list-inline-item"><a href="https://www.instagram.com/liaozhiping1018"><i class="ti-instagram mr-2" aria-hidden="true"></i>Instagram</a></li>
                     </ul>
                 </div>
             </div>
@@ -260,10 +260,10 @@
     </div>
 </footer>
 <div id="scroll-to-top" class="scroll-to-top">
-    <span class="icon fa fa-angle-up"></span>
+    <span class="icon ti-angle-up" aria-hidden="true"></span>
 </div>
 <a href="https://wa.me/85254452984" class="whatsapp-chat" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
-    <i class="fab fa-whatsapp"></i>
+    <i class="ti-comment-alt" aria-hidden="true"></i>
 </a>`;
     }
 

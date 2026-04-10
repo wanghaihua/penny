@@ -19,7 +19,8 @@
 - `css/theme-refresh.css`：当前品牌主题增强样式，负责正式业务页面的主题色、卡片体系、页头页脚和主要商业展示区块。
 - `css/brand-enhancements.css`：品牌质感增强样式，负责绿色装饰元素、品牌 logo 细节、标签体系与轻量动画视觉层。
 - `css/lang-switcher.css`：语言切换器与悬浮 WhatsApp 按钮等补充样式。
-- `js/script.js`：模板通用交互脚本，负责轮播、弹窗、计数器、返回顶部等。
+- `css/site-experience.css`：轻量体验层样式，负责首屏目录卡、原生灯箱、原生轮播、联系页地图卡片和去插件化后的共享交互样式。
+- `js/script.js`：轻量交互脚本，负责移动端导航、返回顶部、计数动画、客户评价轮播与产品灯箱。
 - `js/brand-motion.js`：品牌动效脚本，负责正式页面重点模块的滚动显现动画。
 - `js/site-layout.js`：共享布局脚本，负责注入正式页面统一页头、页脚、回到顶部和 WhatsApp 悬浮入口。
 - `js/lang-switch.js`：当前启用的多语言切换脚本。
@@ -37,9 +38,9 @@
 - 修改翻译时必须同时检查 JSON 与嵌入式兜底数据是否一致，避免本地预览与线上表现不一致。
 
 ## 外部依赖
-- 样式与布局依赖 Bootstrap、Themify、Font Awesome、Magnific Popup、Slick。
-- 页面交互依赖 jQuery 生态插件。
-- 联系页地图依赖 Google Maps 脚本与 `plugins/google-map/map.js`。
+- 样式与布局当前主要依赖 Bootstrap 栅格与 Themify 图标字体。
+- 正式页面交互已去除 jQuery、Slick、Magnific Popup、Counterup 与 Bootstrap JS 依赖，统一改为原生脚本实现。
+- 联系页地图改为惰性加载的 Google Maps iframe，不再依赖 `plugins/google-map/map.js`。
 
 ## 维护约束
 - 修改正式业务页面时，优先围绕 `index.html`、`about.html`、`service.html`、`project.html`、`contact.html` 展开。
@@ -48,16 +49,19 @@
 - 正式页面当前在 `<head>` 中预加载 `js/embedded-translations.js` 和 `js/site-layout.js`，并在 `data-site-header` / `data-site-footer` 挂载点后立刻调用渲染方法，以便页眉页脚在解析阶段同步出现；新增正式页面时应保持这一模式。
 - 共享布局自动渲染必须避免覆盖已完成首屏注入的挂载点，否则会把语言切换等已绑定交互一起替换掉；如确需重绘，应同步考虑事件绑定策略。
 - 主题与配色调整应优先修改 `css/theme-refresh.css`；仅在涉及基础变量或模板原生规则时再回到 `css/style.css`，并同步遵循 `frontend/ui-design.md`。
+- 正式页面新增交互或新的品牌化组件时，优先放入 `css/site-experience.css` 与 `js/script.js`，避免把模板遗留文件继续堆厚。
 - 当前品牌视觉方向为“专业、可持续、商业化”：整体保持明亮、纯色、无渐变，主色为森林绿/鼠尾草绿，大面积底色为纸张米白，强调色仅小面积用于重点信息与转化按钮。
 - 品牌质感增强层统一放在 `css/brand-enhancements.css` 和 `js/brand-motion.js` 中；后续如继续添加装饰元素、品牌标签或滚动动效，应优先在这两个文件内演进。
 - 多卡片区块优先复用 `equal-card-grid` 网格工具类，并根据列数使用 `grid-3`、`grid-4` 等修饰类，避免继续依赖模板原有的 `mb-*` 间距堆叠。
 - 使用 `equal-card-grid` 时必须同时声明列数修饰类；缺少 `grid-*` 修饰会导致只剩等高、不剩列布局。
-- `about.html` 的客户评价区使用 `js/script.js` 中的 `.testimonial-wrap` Slick 单卡轮播；后续如调整样式，应保持“一次一张”的展示节奏。
+- `about.html` 的客户评价区当前使用 `js/script.js` 中的原生单卡轮播；后续如调整样式，应保持“一次一张”的展示节奏。
 - 首页 `Who We Are` 区块当前使用真实双栏图片 + 内容卡结构，而不是绝对定位背景图叠加；后续优先保持这种更稳定的响应式布局。
+- 首页首屏新增了目录卡式右侧信息板，用产品分类与核心资历共同表达“纸品目录册 + 供应链可信度”；后续继续升级首屏时优先沿这个结构迭代，而不是回到纯居中文案。
 - 品牌标识当前保持原有 `Ya<span>me.</span>` 文字字标，不额外引入独立图形 logo；如未来需要品牌图形化，需先单独确认后再改共享布局。
 - 语言切换器当前使用 `js/site-layout.js` 注入的三语言常驻分段按钮，不再使用下拉菜单；对应交互只保留激活态、持久化和自动识别，不应重新引入展开/收起逻辑。
 - 多语言当前采用“嵌入式翻译优先、远程 JSON 后台刷新”的策略：首屏先使用 `js/embedded-translations.js` 立即出字，随后 `js/lang-switch.js` 再请求 `translations/*.json` 刷新数据。
 - 共享头部顶部条当前采用“轻量社交图标 + 电话/邮箱文本链接 + 窄胶囊语言分段按钮”的组合；`md` 及以下分辨率优先允许堆叠为两行，避免继续追求单行硬塞导致错位。
+- 正式页面当前只保留 Themify 一套图标字体；如需新增品牌型图标，优先复用 Themify 或使用少量内联 SVG，不再恢复 Font Awesome。
 - 修改翻译键时，需要同步更新所有语言 JSON，并验证 `js/embedded-translations.js` 是否仍然一致。
 - 联系页当前没有后端接口，任何“表单提交成功”类需求都应先明确是否引入后端或第三方表单服务。
 
