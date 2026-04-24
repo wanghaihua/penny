@@ -27,7 +27,7 @@
 - `js/lang-switch-new.js`：多语言脚本候选版本，与当前版本高度接近，属历史过渡文件。
 - `js/lang-switch-old-backup.js`：旧版多语言脚本备份，已不应继续使用。
 - `js/embedded-translations.js`：嵌入式翻译兜底数据，用于直接双击 HTML 的 `file://` 场景。
-- `js/contact-inquiry.js`：联系表单逻辑，拦截提交并拼装 `mailto:`。
+- `js/contact-inquiry.js`：联系页结构化报价需求简报逻辑，支持产品页 query 预选产品，拦截提交并拼装 `mailto:`。
 - `translations/*.json`：多语言主数据源，当前包含 `en`、`zh`、`es` 三种语言。
 
 ## 多语言机制
@@ -64,6 +64,7 @@
 - 正式页面当前只保留 Themify 一套图标字体；如需新增品牌型图标，优先复用 Themify 或使用少量内联 SVG，不再恢复 Font Awesome。
 - 修改翻译键时，需要同步更新所有语言 JSON，并验证 `js/embedded-translations.js` 是否仍然一致。
 - 联系页当前没有后端接口，任何“表单提交成功”类需求都应先明确是否引入后端或第三方表单服务。
+- 联系页表单当前是结构化报价需求简报，字段包括产品类型、目标市场、月采购量、包装/OEM 要求与补充需求，提交后仍通过 `mailto:` 生成邮件。
 
 ## 本地验证
 - `node --check js/script.js`

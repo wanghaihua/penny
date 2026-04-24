@@ -17,6 +17,7 @@
 `workflow/done/260410-optimize-first-paint-layout.md` - 提升共享布局与多语言文案的首屏可见速度
 `workflow/done/260410-audit-performance-and-brand-experience.md` - 全站性能、加载链路、视觉质感与动效方向诊断
 `workflow/done/260410-implement-performance-and-brand-refresh.md` - 落地全站资源精简、原生交互替换与品牌视觉升级
+`workflow/done/260424-modernize-content-expression.md` - 内容表达现代化改造：首页、关于页、服务页、产品页与联系询盘体验升级
 
 ## 全局重要记忆
 - 本项目是纯静态站点，无构建流程、无包管理、无自动化测试框架，直接通过 HTML/CSS/JS 与 JSON 翻译文件运行。

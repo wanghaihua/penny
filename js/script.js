@@ -283,7 +283,9 @@
             image.src = currentLink.getAttribute('href') || '';
             image.alt = currentLink.querySelector('img') ? currentLink.querySelector('img').getAttribute('alt') || '' : '';
 
-            const content = currentLink.querySelector('.portfolio-item-content');
+            const card = currentLink.closest('.portflio-item');
+            const content = currentLink.querySelector('.portfolio-item-content')
+                || (card ? card.querySelector('.portfolio-item-content') : null);
             caption.innerHTML = content ? content.innerHTML : '';
 
             const showNav = activeGroup.length > 1;

@@ -70,7 +70,7 @@
         <div class="col-lg-6 col-md-12 col-sm-12">
           <form id="contact-form" class="contact__form" method="post" action="#"
             data-inquiry-email="penny.liao@yametissue.com">
-            <h3 class="text-md mb-4" data-i18n="contact_form_title">Contact Form</h3>
+            <h3 class="text-md mb-4" data-i18n="contact_form_title">Build a Quotation Brief</h3>
             <div class="form-group">
               <input name="name" type="text" class="form-control" data-i18n="contact_name" placeholder="Your Name"
                 required>
@@ -79,21 +79,46 @@
               <input name="email" type="email" class="form-control" data-i18n="contact_email"
                 placeholder="Email Address" required>
             </div>
+            <div class="form-group">
+              <select name="product" class="form-control" data-inquiry-product required>
+                <option value="" data-i18n="contact_product_placeholder" disabled selected>Select Product Type</option>
+                <option value="Bath Tissue" data-i18n="product_1_name">Bath Tissue</option>
+                <option value="Dispenser Napkin" data-i18n="product_2_name">Dispenser Napkin</option>
+                <option value="Facial Tissue" data-i18n="product_3_name">Facial Tissue</option>
+                <option value="Food Service Wiper" data-i18n="product_4_name">Food Service Wiper</option>
+                <option value="Napkin Paper" data-i18n="product_5_name">Napkin Paper</option>
+                <option value="Towel Paper" data-i18n="product_6_name">Towel Paper</option>
+              </select>
+            </div>
+            <div class="form-row contact-brief-row">
+              <div class="form-group col-md-6">
+                <input name="market" type="text" class="form-control" data-i18n="contact_market"
+                  placeholder="Target Market" required>
+              </div>
+              <div class="form-group col-md-6">
+                <input name="volume" type="text" class="form-control" data-i18n="contact_volume"
+                  placeholder="Monthly Volume">
+              </div>
+            </div>
+            <div class="form-group">
+              <input name="packaging" type="text" class="form-control" data-i18n="contact_packaging"
+                placeholder="Packaging / OEM Requirements">
+            </div>
             <div class="form-group-2 mb-4">
               <textarea name="message" class="form-control" rows="4" data-i18n="contact_message"
-                placeholder="Your Message" required></textarea>
+                placeholder="Additional Requirements" required></textarea>
             </div>
             <button class="btn btn-main" name="submit" type="submit" data-i18n="contact_send">Send Inquiry</button>
             <p class="mt-3 mb-0 text-muted small" data-i18n="contact_mailto_tip">
-              After submitting, your email app will open with a prefilled inquiry message.
+              After submitting, your email app will open with a structured inquiry brief.
             </p>
           </form>
         </div>
 
         <div class="col-lg-5 col-sm-12">
           <div class="contact-content pl-lg-5 mt-5 mt-lg-0">
-            <span class="text-muted" data-i18n="contact_subtitle">We are Professionals</span>
-            <h2 class="mb-5 mt-2" data-i18n="contact_desc">Don’t Hesitate to contact with us for any kind of information
+            <span class="text-muted" data-i18n="contact_subtitle">Fast quotation support</span>
+            <h2 class="mb-5 mt-2" data-i18n="contact_desc">Send the product, market and volume details buyers usually need clarified first.
             </h2>
 
             <ul class="address-block list-unstyled">
