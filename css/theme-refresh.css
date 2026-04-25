@@ -53,8 +53,8 @@ a:hover {
 
 .section-title .content-title,
 .section-title h2 {
-  letter-spacing: -0.02em;
-  line-height: 1.2;
+  letter-spacing: 0;
+  line-height: 1.24;
 }
 
 .text-color {
@@ -370,9 +370,9 @@ a:hover {
 }
 
 .slider h1 {
-  font-size: 3.7rem;
-  line-height: 1.12;
-  letter-spacing: -0.03em;
+  font-size: 3.2rem;
+  line-height: 1.16;
+  letter-spacing: 0;
   max-width: 760px;
 }
 
@@ -839,7 +839,7 @@ section.about .about-item--split {
   color: rgba(185, 138, 82, 0.22);
   font-size: 4rem;
   line-height: 1;
-  font-family: Georgia, serif;
+  font-family: var(--font-sans);
 }
 
 .testimonial-card .testimonial-text {
@@ -1008,7 +1008,7 @@ section.about .about-item--split {
   }
 
   .slider h1 {
-    font-size: 2.9rem;
+    font-size: 2.55rem;
   }
 
   .trust-strip {
@@ -1113,7 +1113,7 @@ section.about .about-item--split {
   }
 
   .slider h1 {
-    font-size: 2.28rem;
+    font-size: 2.05rem;
   }
 
   .trust-strip {

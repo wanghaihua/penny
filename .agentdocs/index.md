@@ -3,7 +3,7 @@
 `frontend/ui-design.md` - 全站视觉基调、配色、卡片与语言切换设计约束；调整界面表现或主题时必读
 
 ## 当前任务文档
-- （暂无）
+暂无
 
 ## 任务归档
 `workflow/done/260408-govern-static-site-governance.md` - 补齐静态站点治理约束、文档索引与本地验证要求
@@ -18,6 +18,7 @@
 `workflow/done/260410-audit-performance-and-brand-experience.md` - 全站性能、加载链路、视觉质感与动效方向诊断
 `workflow/done/260410-implement-performance-and-brand-refresh.md` - 落地全站资源精简、原生交互替换与品牌视觉升级
 `workflow/done/260424-modernize-content-expression.md` - 内容表达现代化改造：首页、关于页、服务页、产品页与联系询盘体验升级
+`workflow/done/260424-redesign-homepage-conversion.md` - 首页商业转化改版，重构首屏、产品入口、采购证据、流程与 CTA
 
 ## 全局重要记忆
 - 本项目是纯静态站点，无构建流程、无包管理、无自动化测试框架，直接通过 HTML/CSS/JS 与 JSON 翻译文件运行。

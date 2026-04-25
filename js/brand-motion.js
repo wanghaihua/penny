@@ -23,6 +23,16 @@
         '.contact-map-card',
         '.cta-item',
         '.cta-block-2',
+        '.home-quote-panel',
+        '.home-hero-product',
+        '.home-hero-gallery',
+        '.home-proof-strip__grid',
+        '.home-assurance-card',
+        '.home-product-card',
+        '.home-sourcing-image',
+        '.home-sourcing-content',
+        '.home-flow-step',
+        '.home-final-cta__inner',
         '.footer .widget'
     ];
 
